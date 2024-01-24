@@ -1,0 +1,163 @@
+2023-11-09 13:29:42,529 P488831 INFO Params: {
+    "alpha": "0.01",
+    "batch_size": "10000",
+    "cl_temperature": "0.3",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Movielenslatest_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.2",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.01",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user_id', 'item_id', 'tag_id'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "3",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "mlep_hidden_units": "[960]",
+    "mlp_hidden_units": "[400, 400, 400]",
+    "model": "SimCEN_MLP",
+    "model_id": "SimCEN_MLP_Movielens",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Movielenslatest_x1_h5/test.h5",
+    "through_dropout": "0.1",
+    "train_data": "../../../data/Movielenslatest_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.1",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.2",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/Movielenslatest_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-11-09 13:29:42,530 P488831 INFO Load feature_map from json: ../../../data/Movielenslatest_x1_h5/feature_map.json
+2023-11-09 13:29:42,530 P488831 INFO Set column index...
+2023-11-09 13:29:42,530 P488831 INFO Feature specs: {
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22574, 'vocab_size': 22575}",
+    "tag_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 49658, 'vocab_size': 49659}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16361, 'vocab_size': 16362}"
+}
+2023-11-09 13:29:45,272 P488831 INFO Total number of parameters: 2007330.
+2023-11-09 13:29:45,272 P488831 INFO Loading data...
+2023-11-09 13:29:45,273 P488831 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/train.h5
+2023-11-09 13:29:45,314 P488831 INFO Train samples: total/1404801, blocks/1
+2023-11-09 13:29:45,314 P488831 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/valid.h5
+2023-11-09 13:29:45,326 P488831 INFO Validation samples: total/401372, blocks/1
+2023-11-09 13:29:45,326 P488831 INFO Loading train and validation data done.
+2023-11-09 13:29:45,326 P488831 INFO Start training: 141 batches/epoch
+2023-11-09 13:29:45,326 P488831 INFO ************ Epoch=1 start ************
+2023-11-09 13:29:55,143 P488831 INFO Train loss: 0.486144
+2023-11-09 13:29:55,144 P488831 INFO Evaluation @epoch 1 - batch 141: 
+2023-11-09 13:29:56,700 P488831 INFO ===
+2023-11-09 13:29:56,700 P488831 INFO [Metrics] AUC: 0.935374 - logloss: 0.343941
+2023-11-09 13:29:56,700 P488831 INFO Save best model: monitor(max)=0.591433
+2023-11-09 13:29:56,761 P488831 INFO ************ Epoch=1 end ************
+2023-11-09 13:30:04,463 P488831 INFO Train loss: 0.418135
+2023-11-09 13:30:04,463 P488831 INFO Evaluation @epoch 2 - batch 141: 
+2023-11-09 13:30:06,189 P488831 INFO ===
+2023-11-09 13:30:06,189 P488831 INFO [Metrics] AUC: 0.951598 - logloss: 0.294899
+2023-11-09 13:30:06,189 P488831 INFO Save best model: monitor(max)=0.656699
+2023-11-09 13:30:06,282 P488831 INFO ************ Epoch=2 end ************
+2023-11-09 13:30:13,828 P488831 INFO Train loss: 0.411831
+2023-11-09 13:30:13,829 P488831 INFO Evaluation @epoch 3 - batch 141: 
+2023-11-09 13:30:15,539 P488831 INFO ===
+2023-11-09 13:30:15,539 P488831 INFO [Metrics] AUC: 0.958190 - logloss: 0.264730
+2023-11-09 13:30:15,540 P488831 INFO Save best model: monitor(max)=0.693459
+2023-11-09 13:30:15,616 P488831 INFO ************ Epoch=3 end ************
+2023-11-09 13:30:23,208 P488831 INFO Train loss: 0.409147
+2023-11-09 13:30:23,208 P488831 INFO Evaluation @epoch 4 - batch 141: 
+2023-11-09 13:30:24,791 P488831 INFO ===
+2023-11-09 13:30:24,792 P488831 INFO [Metrics] AUC: 0.961084 - logloss: 0.221088
+2023-11-09 13:30:24,792 P488831 INFO Save best model: monitor(max)=0.739995
+2023-11-09 13:30:24,856 P488831 INFO ************ Epoch=4 end ************
+2023-11-09 13:30:32,373 P488831 INFO Train loss: 0.408542
+2023-11-09 13:30:32,373 P488831 INFO Evaluation @epoch 5 - batch 141: 
+2023-11-09 13:30:34,104 P488831 INFO ===
+2023-11-09 13:30:34,104 P488831 INFO [Metrics] AUC: 0.962632 - logloss: 0.217805
+2023-11-09 13:30:34,104 P488831 INFO Save best model: monitor(max)=0.744826
+2023-11-09 13:30:34,208 P488831 INFO ************ Epoch=5 end ************
+2023-11-09 13:30:39,443 P488831 INFO Train loss: 0.407624
+2023-11-09 13:30:39,444 P488831 INFO Evaluation @epoch 6 - batch 141: 
+2023-11-09 13:30:41,157 P488831 INFO ===
+2023-11-09 13:30:41,157 P488831 INFO [Metrics] AUC: 0.962741 - logloss: 0.217289
+2023-11-09 13:30:41,157 P488831 INFO Save best model: monitor(max)=0.745452
+2023-11-09 13:30:41,243 P488831 INFO ************ Epoch=6 end ************
+2023-11-09 13:30:48,467 P488831 INFO Train loss: 0.407139
+2023-11-09 13:30:48,467 P488831 INFO Evaluation @epoch 7 - batch 141: 
+2023-11-09 13:30:50,134 P488831 INFO ===
+2023-11-09 13:30:50,135 P488831 INFO [Metrics] AUC: 0.963699 - logloss: 0.214209
+2023-11-09 13:30:50,135 P488831 INFO Save best model: monitor(max)=0.749490
+2023-11-09 13:30:50,221 P488831 INFO ************ Epoch=7 end ************
+2023-11-09 13:30:57,394 P488831 INFO Train loss: 0.406255
+2023-11-09 13:30:57,394 P488831 INFO Evaluation @epoch 8 - batch 141: 
+2023-11-09 13:30:58,963 P488831 INFO ===
+2023-11-09 13:30:58,963 P488831 INFO [Metrics] AUC: 0.964298 - logloss: 0.212647
+2023-11-09 13:30:58,963 P488831 INFO Save best model: monitor(max)=0.751651
+2023-11-09 13:30:59,059 P488831 INFO ************ Epoch=8 end ************
+2023-11-09 13:31:06,171 P488831 INFO Train loss: 0.404955
+2023-11-09 13:31:06,171 P488831 INFO Evaluation @epoch 9 - batch 141: 
+2023-11-09 13:31:07,781 P488831 INFO ===
+2023-11-09 13:31:07,781 P488831 INFO [Metrics] AUC: 0.964821 - logloss: 0.210841
+2023-11-09 13:31:07,782 P488831 INFO Save best model: monitor(max)=0.753981
+2023-11-09 13:31:07,882 P488831 INFO ************ Epoch=9 end ************
+2023-11-09 13:31:15,483 P488831 INFO Train loss: 0.404926
+2023-11-09 13:31:15,483 P488831 INFO Evaluation @epoch 10 - batch 141: 
+2023-11-09 13:31:17,051 P488831 INFO ===
+2023-11-09 13:31:17,051 P488831 INFO [Metrics] AUC: 0.964431 - logloss: 0.213143
+2023-11-09 13:31:17,051 P488831 INFO Monitor(max)=0.751288 STOP!
+2023-11-09 13:31:17,052 P488831 INFO Reduce learning rate on plateau: 0.000100
+2023-11-09 13:31:17,111 P488831 INFO ************ Epoch=10 end ************
+2023-11-09 13:31:24,767 P488831 INFO Train loss: 0.314928
+2023-11-09 13:31:24,767 P488831 INFO Evaluation @epoch 11 - batch 141: 
+2023-11-09 13:31:26,599 P488831 INFO ===
+2023-11-09 13:31:26,599 P488831 INFO [Metrics] AUC: 0.971218 - logloss: 0.201946
+2023-11-09 13:31:26,599 P488831 INFO Save best model: monitor(max)=0.769272
+2023-11-09 13:31:26,714 P488831 INFO ************ Epoch=11 end ************
+2023-11-09 13:31:32,438 P488831 INFO Train loss: 0.224982
+2023-11-09 13:31:32,438 P488831 INFO Evaluation @epoch 12 - batch 141: 
+2023-11-09 13:31:34,156 P488831 INFO ===
+2023-11-09 13:31:34,157 P488831 INFO [Metrics] AUC: 0.972700 - logloss: 0.216295
+2023-11-09 13:31:34,158 P488831 INFO Monitor(max)=0.756406 STOP!
+2023-11-09 13:31:34,158 P488831 INFO Reduce learning rate on plateau: 0.000010
+2023-11-09 13:31:34,245 P488831 INFO ************ Epoch=12 end ************
+2023-11-09 13:31:41,688 P488831 INFO Train loss: 0.185093
+2023-11-09 13:31:41,689 P488831 INFO Evaluation @epoch 13 - batch 141: 
+2023-11-09 13:31:43,398 P488831 INFO ===
+2023-11-09 13:31:43,398 P488831 INFO [Metrics] AUC: 0.972756 - logloss: 0.221812
+2023-11-09 13:31:43,399 P488831 INFO Monitor(max)=0.750944 STOP!
+2023-11-09 13:31:43,399 P488831 INFO Reduce learning rate on plateau: 0.000001
+2023-11-09 13:31:43,399 P488831 INFO ********* Epoch==13 early stop *********
+2023-11-09 13:31:43,475 P488831 INFO Training finished.
+2023-11-09 13:31:43,476 P488831 INFO Load best model: /mnt/public/lhh/code/model_zoo/SimCEN/SimCEN_torch/checkpoints/Movielenslatest_x1_h5/SimCEN_MLP_Movielens.model
+2023-11-09 13:31:43,570 P488831 INFO ****** Validation evaluation ******
+2023-11-09 13:31:45,285 P488831 INFO ===
+2023-11-09 13:31:45,285 P488831 INFO [Metrics] logloss: 0.201946 - AUC: 0.971218
+2023-11-09 13:31:45,373 P488831 INFO ******** Test evaluation ********
+2023-11-09 13:31:45,373 P488831 INFO Loading data...
+2023-11-09 13:31:45,373 P488831 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/test.h5
+2023-11-09 13:31:45,378 P488831 INFO Test samples: total/200686, blocks/1
+2023-11-09 13:31:45,378 P488831 INFO Loading test data done.
+2023-11-09 13:31:46,251 P488831 INFO ===
+2023-11-09 13:31:46,251 P488831 INFO [Metrics] logloss: 0.203932 - AUC: 0.970896

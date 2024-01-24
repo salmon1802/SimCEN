@@ -1,0 +1,164 @@
+2023-12-16 17:04:16,951 P712004 INFO Params: {
+    "alpha": "0.02",
+    "batch_size": "10000",
+    "cl_temperature": "0.25",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Movielenslatest_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.1",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.01",
+    "embedding_share": "False",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user_id', 'item_id', 'tag_id'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "2",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "mlep1_hidden_units": "[480, 480, 480]",
+    "mlep2_hidden_units": "[480]",
+    "model": "SimCEN_SimCEN",
+    "model_id": "SimCEN_SimCEN_Movielens_10292_c7e64b4e",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Movielenslatest_x1_h5/test.h5",
+    "through_dropout": "0.1",
+    "train_data": "../../../data/Movielenslatest_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.3",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.1",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/Movielenslatest_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-12-16 17:04:16,952 P712004 INFO Load feature_map from json: ../../../data/Movielenslatest_x1_h5/feature_map.json
+2023-12-16 17:04:16,952 P712004 INFO Set column index...
+2023-12-16 17:04:16,952 P712004 INFO Feature specs: {
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22574, 'vocab_size': 22575}",
+    "tag_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 49658, 'vocab_size': 49659}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16361, 'vocab_size': 16362}"
+}
+2023-12-16 17:04:25,466 P712004 INFO Total number of parameters: 3547457.
+2023-12-16 17:04:25,466 P712004 INFO Loading data...
+2023-12-16 17:04:25,466 P712004 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/train.h5
+2023-12-16 17:04:25,507 P712004 INFO Train samples: total/1404801, blocks/1
+2023-12-16 17:04:25,507 P712004 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/valid.h5
+2023-12-16 17:04:25,511 P712004 INFO Validation samples: total/401372, blocks/1
+2023-12-16 17:04:25,511 P712004 INFO Loading train and validation data done.
+2023-12-16 17:04:25,511 P712004 INFO Start training: 141 batches/epoch
+2023-12-16 17:04:25,511 P712004 INFO ************ Epoch=1 start ************
+2023-12-16 17:04:34,690 P712004 INFO Train loss: 0.692417
+2023-12-16 17:04:34,690 P712004 INFO Evaluation @epoch 1 - batch 141: 
+2023-12-16 17:04:36,604 P712004 INFO ===
+2023-12-16 17:04:36,604 P712004 INFO [Metrics] AUC: 0.934038 - logloss: 0.384774
+2023-12-16 17:04:36,604 P712004 INFO Save best model: monitor(max)=0.549264
+2023-12-16 17:04:36,797 P712004 INFO ************ Epoch=1 end ************
+2023-12-16 17:04:45,385 P712004 INFO Train loss: 0.634649
+2023-12-16 17:04:45,386 P712004 INFO Evaluation @epoch 2 - batch 141: 
+2023-12-16 17:04:47,197 P712004 INFO ===
+2023-12-16 17:04:47,197 P712004 INFO [Metrics] AUC: 0.949944 - logloss: 0.290865
+2023-12-16 17:04:47,198 P712004 INFO Save best model: monitor(max)=0.659079
+2023-12-16 17:04:47,398 P712004 INFO ************ Epoch=2 end ************
+2023-12-16 17:04:55,128 P712004 INFO Train loss: 0.632974
+2023-12-16 17:04:55,128 P712004 INFO Evaluation @epoch 3 - batch 141: 
+2023-12-16 17:04:56,770 P712004 INFO ===
+2023-12-16 17:04:56,770 P712004 INFO [Metrics] AUC: 0.954900 - logloss: 0.243352
+2023-12-16 17:04:56,770 P712004 INFO Save best model: monitor(max)=0.711549
+2023-12-16 17:04:56,945 P712004 INFO ************ Epoch=3 end ************
+2023-12-16 17:05:04,527 P712004 INFO Train loss: 0.632365
+2023-12-16 17:05:04,528 P712004 INFO Evaluation @epoch 4 - batch 141: 
+2023-12-16 17:05:06,110 P712004 INFO ===
+2023-12-16 17:05:06,110 P712004 INFO [Metrics] AUC: 0.958432 - logloss: 0.239040
+2023-12-16 17:05:06,110 P712004 INFO Save best model: monitor(max)=0.719392
+2023-12-16 17:05:06,310 P712004 INFO ************ Epoch=4 end ************
+2023-12-16 17:05:13,709 P712004 INFO Train loss: 0.636691
+2023-12-16 17:05:13,709 P712004 INFO Evaluation @epoch 5 - batch 141: 
+2023-12-16 17:05:15,299 P712004 INFO ===
+2023-12-16 17:05:15,299 P712004 INFO [Metrics] AUC: 0.959809 - logloss: 0.220354
+2023-12-16 17:05:15,299 P712004 INFO Save best model: monitor(max)=0.739455
+2023-12-16 17:05:15,513 P712004 INFO ************ Epoch=5 end ************
+2023-12-16 17:05:23,896 P712004 INFO Train loss: 0.640938
+2023-12-16 17:05:23,896 P712004 INFO Evaluation @epoch 6 - batch 141: 
+2023-12-16 17:05:25,602 P712004 INFO ===
+2023-12-16 17:05:25,602 P712004 INFO [Metrics] AUC: 0.960676 - logloss: 0.220326
+2023-12-16 17:05:25,602 P712004 INFO Save best model: monitor(max)=0.740349
+2023-12-16 17:05:25,757 P712004 INFO ************ Epoch=6 end ************
+2023-12-16 17:05:34,291 P712004 INFO Train loss: 0.642298
+2023-12-16 17:05:34,291 P712004 INFO Evaluation @epoch 7 - batch 141: 
+2023-12-16 17:05:35,919 P712004 INFO ===
+2023-12-16 17:05:35,919 P712004 INFO [Metrics] AUC: 0.961340 - logloss: 0.215360
+2023-12-16 17:05:35,919 P712004 INFO Save best model: monitor(max)=0.745980
+2023-12-16 17:05:36,161 P712004 INFO ************ Epoch=7 end ************
+2023-12-16 17:05:45,085 P712004 INFO Train loss: 0.644164
+2023-12-16 17:05:45,085 P712004 INFO Evaluation @epoch 8 - batch 141: 
+2023-12-16 17:05:46,776 P712004 INFO ===
+2023-12-16 17:05:46,776 P712004 INFO [Metrics] AUC: 0.962504 - logloss: 0.215068
+2023-12-16 17:05:46,776 P712004 INFO Save best model: monitor(max)=0.747436
+2023-12-16 17:05:46,982 P712004 INFO ************ Epoch=8 end ************
+2023-12-16 17:05:55,913 P712004 INFO Train loss: 0.642393
+2023-12-16 17:05:55,913 P712004 INFO Evaluation @epoch 9 - batch 141: 
+2023-12-16 17:05:57,728 P712004 INFO ===
+2023-12-16 17:05:57,728 P712004 INFO [Metrics] AUC: 0.962601 - logloss: 0.213351
+2023-12-16 17:05:57,728 P712004 INFO Save best model: monitor(max)=0.749250
+2023-12-16 17:05:57,917 P712004 INFO ************ Epoch=9 end ************
+2023-12-16 17:06:06,523 P712004 INFO Train loss: 0.644448
+2023-12-16 17:06:06,523 P712004 INFO Evaluation @epoch 10 - batch 141: 
+2023-12-16 17:06:08,141 P712004 INFO ===
+2023-12-16 17:06:08,141 P712004 INFO [Metrics] AUC: 0.963774 - logloss: 0.227455
+2023-12-16 17:06:08,141 P712004 INFO Monitor(max)=0.736319 STOP!
+2023-12-16 17:06:08,141 P712004 INFO Reduce learning rate on plateau: 0.000100
+2023-12-16 17:06:08,319 P712004 INFO ************ Epoch=10 end ************
+2023-12-16 17:06:15,830 P712004 INFO Train loss: 0.511959
+2023-12-16 17:06:15,830 P712004 INFO Evaluation @epoch 11 - batch 141: 
+2023-12-16 17:06:17,213 P712004 INFO ===
+2023-12-16 17:06:17,214 P712004 INFO [Metrics] AUC: 0.972494 - logloss: 0.188835
+2023-12-16 17:06:17,214 P712004 INFO Save best model: monitor(max)=0.783659
+2023-12-16 17:06:17,385 P712004 INFO ************ Epoch=11 end ************
+2023-12-16 17:06:24,630 P712004 INFO Train loss: 0.386545
+2023-12-16 17:06:24,630 P712004 INFO Evaluation @epoch 12 - batch 141: 
+2023-12-16 17:06:26,060 P712004 INFO ===
+2023-12-16 17:06:26,060 P712004 INFO [Metrics] AUC: 0.972896 - logloss: 0.215448
+2023-12-16 17:06:26,060 P712004 INFO Monitor(max)=0.757448 STOP!
+2023-12-16 17:06:26,060 P712004 INFO Reduce learning rate on plateau: 0.000010
+2023-12-16 17:06:26,226 P712004 INFO ************ Epoch=12 end ************
+2023-12-16 17:06:33,827 P712004 INFO Train loss: 0.341958
+2023-12-16 17:06:33,827 P712004 INFO Evaluation @epoch 13 - batch 141: 
+2023-12-16 17:06:35,435 P712004 INFO ===
+2023-12-16 17:06:35,435 P712004 INFO [Metrics] AUC: 0.973012 - logloss: 0.210555
+2023-12-16 17:06:35,435 P712004 INFO Monitor(max)=0.762457 STOP!
+2023-12-16 17:06:35,435 P712004 INFO Reduce learning rate on plateau: 0.000001
+2023-12-16 17:06:35,435 P712004 INFO ********* Epoch==13 early stop *********
+2023-12-16 17:06:35,589 P712004 INFO Training finished.
+2023-12-16 17:06:35,589 P712004 INFO Load best model: /root/autodl-tmp/model_zoo/SimCEN/SimCEN_torch/checkpoints/Movielenslatest_x1_h5/SimCEN_SimCEN_Movielens_10292_c7e64b4e.model
+2023-12-16 17:06:35,634 P712004 INFO ****** Validation evaluation ******
+2023-12-16 17:06:37,373 P712004 INFO ===
+2023-12-16 17:06:37,373 P712004 INFO [Metrics] logloss: 0.188835 - AUC: 0.972494
+2023-12-16 17:06:37,422 P712004 INFO ******** Test evaluation ********
+2023-12-16 17:06:37,422 P712004 INFO Loading data...
+2023-12-16 17:06:37,422 P712004 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/test.h5
+2023-12-16 17:06:37,425 P712004 INFO Test samples: total/200686, blocks/1
+2023-12-16 17:06:37,425 P712004 INFO Loading test data done.
+2023-12-16 17:06:38,682 P712004 INFO ===
+2023-12-16 17:06:38,682 P712004 INFO [Metrics] logloss: 0.189205 - AUC: 0.972507

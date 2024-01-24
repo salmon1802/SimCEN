@@ -1,0 +1,170 @@
+2023-12-14 01:28:27,010 P535932 INFO Params: {
+    "alpha": "0.04",
+    "batch_size": "10000",
+    "cl_temperature": "0.5",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Frappe_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.1",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.1",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user', 'item', 'daytime', 'weekday', 'isweekend', 'homework', 'cost', 'weather', 'country', 'city'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "0",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "mlep_hidden_units": "[480, 480, 480]",
+    "mlp_hidden_units": "[800, 400]",
+    "model": "SimCEN_MLP",
+    "model_id": "SimCEN_MLP_Frappe_x1_h5_1645_bd32cf1f",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Frappe_x1_h5/test.h5",
+    "through_dropout": "0.1",
+    "train_data": "../../../data/Frappe_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.1",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.2",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/Frappe_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-12-14 01:28:27,011 P535932 INFO Load feature_map from json: ../../../data/Frappe_x1_h5/feature_map.json
+2023-12-14 01:28:27,011 P535932 INFO Set column index...
+2023-12-14 01:28:27,011 P535932 INFO Feature specs: {
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 232, 'vocab_size': 233}",
+    "cost": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "country": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 81, 'vocab_size': 82}",
+    "daytime": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "homework": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "isweekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "item": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4083, 'vocab_size': 4084}",
+    "user": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 941, 'vocab_size': 942}",
+    "weather": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}"
+}
+2023-12-14 01:28:32,851 P535932 INFO Total number of parameters: 1330706.
+2023-12-14 01:28:32,851 P535932 INFO Loading data...
+2023-12-14 01:28:32,851 P535932 INFO Loading data from h5: ../../../data/Frappe_x1_h5/train.h5
+2023-12-14 01:28:32,865 P535932 INFO Train samples: total/202027, blocks/1
+2023-12-14 01:28:32,865 P535932 INFO Loading data from h5: ../../../data/Frappe_x1_h5/valid.h5
+2023-12-14 01:28:32,868 P535932 INFO Validation samples: total/57722, blocks/1
+2023-12-14 01:28:32,868 P535932 INFO Loading train and validation data done.
+2023-12-14 01:28:32,868 P535932 INFO Start training: 21 batches/epoch
+2023-12-14 01:28:32,868 P535932 INFO ************ Epoch=1 start ************
+2023-12-14 01:28:34,285 P535932 INFO Train loss: 0.857848
+2023-12-14 01:28:34,286 P535932 INFO Evaluation @epoch 1 - batch 21: 
+2023-12-14 01:28:34,986 P535932 INFO ===
+2023-12-14 01:28:34,986 P535932 INFO [Metrics] AUC: 0.924535 - logloss: 0.667483
+2023-12-14 01:28:34,986 P535932 INFO Save best model: monitor(max)=0.257052
+2023-12-14 01:28:35,223 P535932 INFO ************ Epoch=1 end ************
+2023-12-14 01:28:36,610 P535932 INFO Train loss: 0.638950
+2023-12-14 01:28:36,611 P535932 INFO Evaluation @epoch 2 - batch 21: 
+2023-12-14 01:28:37,387 P535932 INFO ===
+2023-12-14 01:28:37,387 P535932 INFO [Metrics] AUC: 0.924464 - logloss: 0.596623
+2023-12-14 01:28:37,388 P535932 INFO Save best model: monitor(max)=0.327841
+2023-12-14 01:28:37,578 P535932 INFO ************ Epoch=2 end ************
+2023-12-14 01:28:39,166 P535932 INFO Train loss: 0.554955
+2023-12-14 01:28:39,167 P535932 INFO Evaluation @epoch 3 - batch 21: 
+2023-12-14 01:28:39,872 P535932 INFO ===
+2023-12-14 01:28:39,872 P535932 INFO [Metrics] AUC: 0.934267 - logloss: 0.528497
+2023-12-14 01:28:39,872 P535932 INFO Save best model: monitor(max)=0.405770
+2023-12-14 01:28:40,083 P535932 INFO ************ Epoch=3 end ************
+2023-12-14 01:28:41,519 P535932 INFO Train loss: 0.511962
+2023-12-14 01:28:41,519 P535932 INFO Evaluation @epoch 4 - batch 21: 
+2023-12-14 01:28:42,293 P535932 INFO ===
+2023-12-14 01:28:42,294 P535932 INFO [Metrics] AUC: 0.974667 - logloss: 0.341153
+2023-12-14 01:28:42,294 P535932 INFO Save best model: monitor(max)=0.633513
+2023-12-14 01:28:42,481 P535932 INFO ************ Epoch=4 end ************
+2023-12-14 01:28:43,764 P535932 INFO Train loss: 0.493062
+2023-12-14 01:28:43,764 P535932 INFO Evaluation @epoch 5 - batch 21: 
+2023-12-14 01:28:44,469 P535932 INFO ===
+2023-12-14 01:28:44,470 P535932 INFO [Metrics] AUC: 0.980075 - logloss: 0.170807
+2023-12-14 01:28:44,470 P535932 INFO Save best model: monitor(max)=0.809268
+2023-12-14 01:28:44,665 P535932 INFO ************ Epoch=5 end ************
+2023-12-14 01:28:46,041 P535932 INFO Train loss: 0.478904
+2023-12-14 01:28:46,042 P535932 INFO Evaluation @epoch 6 - batch 21: 
+2023-12-14 01:28:46,785 P535932 INFO ===
+2023-12-14 01:28:46,786 P535932 INFO [Metrics] AUC: 0.980702 - logloss: 0.167819
+2023-12-14 01:28:46,786 P535932 INFO Save best model: monitor(max)=0.812883
+2023-12-14 01:28:46,997 P535932 INFO ************ Epoch=6 end ************
+2023-12-14 01:28:48,430 P535932 INFO Train loss: 0.467686
+2023-12-14 01:28:48,431 P535932 INFO Evaluation @epoch 7 - batch 21: 
+2023-12-14 01:28:49,117 P535932 INFO ===
+2023-12-14 01:28:49,118 P535932 INFO [Metrics] AUC: 0.981984 - logloss: 0.159289
+2023-12-14 01:28:49,118 P535932 INFO Save best model: monitor(max)=0.822695
+2023-12-14 01:28:49,300 P535932 INFO ************ Epoch=7 end ************
+2023-12-14 01:28:50,574 P535932 INFO Train loss: 0.460009
+2023-12-14 01:28:50,574 P535932 INFO Evaluation @epoch 8 - batch 21: 
+2023-12-14 01:28:51,210 P535932 INFO ===
+2023-12-14 01:28:51,210 P535932 INFO [Metrics] AUC: 0.981564 - logloss: 0.164833
+2023-12-14 01:28:51,211 P535932 INFO Monitor(max)=0.816731 STOP!
+2023-12-14 01:28:51,211 P535932 INFO Reduce learning rate on plateau: 0.000100
+2023-12-14 01:28:51,377 P535932 INFO ************ Epoch=8 end ************
+2023-12-14 01:28:52,976 P535932 INFO Train loss: 0.428279
+2023-12-14 01:28:52,977 P535932 INFO Evaluation @epoch 9 - batch 21: 
+2023-12-14 01:28:53,620 P535932 INFO ===
+2023-12-14 01:28:53,620 P535932 INFO [Metrics] AUC: 0.984015 - logloss: 0.146180
+2023-12-14 01:28:53,621 P535932 INFO Save best model: monitor(max)=0.837835
+2023-12-14 01:28:53,762 P535932 INFO ************ Epoch=9 end ************
+2023-12-14 01:28:55,015 P535932 INFO Train loss: 0.405980
+2023-12-14 01:28:55,015 P535932 INFO Evaluation @epoch 10 - batch 21: 
+2023-12-14 01:28:55,801 P535932 INFO ===
+2023-12-14 01:28:55,801 P535932 INFO [Metrics] AUC: 0.985035 - logloss: 0.140993
+2023-12-14 01:28:55,801 P535932 INFO Save best model: monitor(max)=0.844042
+2023-12-14 01:28:55,960 P535932 INFO ************ Epoch=10 end ************
+2023-12-14 01:28:57,241 P535932 INFO Train loss: 0.392721
+2023-12-14 01:28:57,241 P535932 INFO Evaluation @epoch 11 - batch 21: 
+2023-12-14 01:28:57,986 P535932 INFO ===
+2023-12-14 01:28:57,986 P535932 INFO [Metrics] AUC: 0.985476 - logloss: 0.139612
+2023-12-14 01:28:57,986 P535932 INFO Save best model: monitor(max)=0.845864
+2023-12-14 01:28:58,198 P535932 INFO ************ Epoch=11 end ************
+2023-12-14 01:28:59,367 P535932 INFO Train loss: 0.382962
+2023-12-14 01:28:59,368 P535932 INFO Evaluation @epoch 12 - batch 21: 
+2023-12-14 01:29:00,118 P535932 INFO ===
+2023-12-14 01:29:00,118 P535932 INFO [Metrics] AUC: 0.985646 - logloss: 0.140532
+2023-12-14 01:29:00,118 P535932 INFO Monitor(max)=0.845113 STOP!
+2023-12-14 01:29:00,118 P535932 INFO Reduce learning rate on plateau: 0.000010
+2023-12-14 01:29:00,297 P535932 INFO ************ Epoch=12 end ************
+2023-12-14 01:29:01,565 P535932 INFO Train loss: 0.376048
+2023-12-14 01:29:01,565 P535932 INFO Evaluation @epoch 13 - batch 21: 
+2023-12-14 01:29:02,235 P535932 INFO ===
+2023-12-14 01:29:02,235 P535932 INFO [Metrics] AUC: 0.985665 - logloss: 0.143010
+2023-12-14 01:29:02,235 P535932 INFO Monitor(max)=0.842655 STOP!
+2023-12-14 01:29:02,235 P535932 INFO Reduce learning rate on plateau: 0.000001
+2023-12-14 01:29:02,236 P535932 INFO ********* Epoch==13 early stop *********
+2023-12-14 01:29:02,393 P535932 INFO Training finished.
+2023-12-14 01:29:02,393 P535932 INFO Load best model: /root/autodl-tmp/model_zoo/SimCEN/SimCEN_torch/checkpoints/Frappe_x1_h5/SimCEN_MLP_Frappe_x1_h5_1645_bd32cf1f.model
+2023-12-14 01:29:02,400 P535932 INFO ****** Validation evaluation ******
+2023-12-14 01:29:03,150 P535932 INFO ===
+2023-12-14 01:29:03,150 P535932 INFO [Metrics] logloss: 0.139612 - AUC: 0.985476
+2023-12-14 01:29:03,188 P535932 INFO ******** Test evaluation ********
+2023-12-14 01:29:03,188 P535932 INFO Loading data...
+2023-12-14 01:29:03,189 P535932 INFO Loading data from h5: ../../../data/Frappe_x1_h5/test.h5
+2023-12-14 01:29:03,191 P535932 INFO Test samples: total/28860, blocks/1
+2023-12-14 01:29:03,192 P535932 INFO Loading test data done.
+2023-12-14 01:29:03,967 P535932 INFO ===
+2023-12-14 01:29:03,967 P535932 INFO [Metrics] logloss: 0.138783 - AUC: 0.985327

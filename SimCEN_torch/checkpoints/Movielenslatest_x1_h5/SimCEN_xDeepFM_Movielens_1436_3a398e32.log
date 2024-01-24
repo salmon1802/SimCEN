@@ -1,0 +1,151 @@
+2023-11-12 19:32:16,720 P1815304 INFO Params: {
+    "alpha": "0.01",
+    "batch_size": "10000",
+    "cin_hidden_units": "[64]",
+    "cl_temperature": "0.3",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Movielenslatest_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.3",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.01",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user_id', 'item_id', 'tag_id'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "1",
+    "group_id": "None",
+    "hidden_units": "[480, 480]",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "SimCEN_xDeepFM",
+    "model_id": "SimCEN_xDeepFM_Movielens_1436_3a398e32",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Movielenslatest_x1_h5/test.h5",
+    "through_dropout": "0.1",
+    "train_data": "../../../data/Movielenslatest_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.1",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.2",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/Movielenslatest_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-11-12 19:32:16,722 P1815304 INFO Load feature_map from json: ../../../data/Movielenslatest_x1_h5/feature_map.json
+2023-11-12 19:32:16,722 P1815304 INFO Set column index...
+2023-11-12 19:32:16,723 P1815304 INFO Feature specs: {
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22574, 'vocab_size': 22575}",
+    "tag_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 49658, 'vocab_size': 49659}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16361, 'vocab_size': 16362}"
+}
+2023-11-12 19:32:18,792 P1815304 INFO Total number of parameters: 1863030.
+2023-11-12 19:32:18,792 P1815304 INFO Loading data...
+2023-11-12 19:32:18,793 P1815304 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/train.h5
+2023-11-12 19:32:18,838 P1815304 INFO Train samples: total/1404801, blocks/1
+2023-11-12 19:32:18,838 P1815304 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/valid.h5
+2023-11-12 19:32:18,853 P1815304 INFO Validation samples: total/401372, blocks/1
+2023-11-12 19:32:18,853 P1815304 INFO Loading train and validation data done.
+2023-11-12 19:32:18,853 P1815304 INFO Start training: 141 batches/epoch
+2023-11-12 19:32:18,853 P1815304 INFO ************ Epoch=1 start ************
+2023-11-12 19:32:27,721 P1815304 INFO Train loss: 0.497237
+2023-11-12 19:32:27,721 P1815304 INFO Evaluation @epoch 1 - batch 141: 
+2023-11-12 19:32:29,311 P1815304 INFO ===
+2023-11-12 19:32:29,311 P1815304 INFO [Metrics] AUC: 0.936996 - logloss: 0.299047
+2023-11-12 19:32:29,312 P1815304 INFO Save best model: monitor(max)=0.637948
+2023-11-12 19:32:29,386 P1815304 INFO ************ Epoch=1 end ************
+2023-11-12 19:32:35,618 P1815304 INFO Train loss: 0.414047
+2023-11-12 19:32:35,619 P1815304 INFO Evaluation @epoch 2 - batch 141: 
+2023-11-12 19:32:37,341 P1815304 INFO ===
+2023-11-12 19:32:37,341 P1815304 INFO [Metrics] AUC: 0.948757 - logloss: 0.288198
+2023-11-12 19:32:37,341 P1815304 INFO Save best model: monitor(max)=0.660559
+2023-11-12 19:32:37,464 P1815304 INFO ************ Epoch=2 end ************
+2023-11-12 19:32:43,456 P1815304 INFO Train loss: 0.410248
+2023-11-12 19:32:43,456 P1815304 INFO Evaluation @epoch 3 - batch 141: 
+2023-11-12 19:32:45,257 P1815304 INFO ===
+2023-11-12 19:32:45,257 P1815304 INFO [Metrics] AUC: 0.956432 - logloss: 0.235680
+2023-11-12 19:32:45,257 P1815304 INFO Save best model: monitor(max)=0.720752
+2023-11-12 19:32:45,485 P1815304 INFO ************ Epoch=3 end ************
+2023-11-12 19:32:51,706 P1815304 INFO Train loss: 0.405317
+2023-11-12 19:32:51,706 P1815304 INFO Evaluation @epoch 4 - batch 141: 
+2023-11-12 19:32:53,437 P1815304 INFO ===
+2023-11-12 19:32:53,438 P1815304 INFO [Metrics] AUC: 0.959678 - logloss: 0.229712
+2023-11-12 19:32:53,438 P1815304 INFO Save best model: monitor(max)=0.729965
+2023-11-12 19:32:53,580 P1815304 INFO ************ Epoch=4 end ************
+2023-11-12 19:32:59,466 P1815304 INFO Train loss: 0.407508
+2023-11-12 19:32:59,466 P1815304 INFO Evaluation @epoch 5 - batch 141: 
+2023-11-12 19:33:01,036 P1815304 INFO ===
+2023-11-12 19:33:01,036 P1815304 INFO [Metrics] AUC: 0.961399 - logloss: 0.222845
+2023-11-12 19:33:01,036 P1815304 INFO Save best model: monitor(max)=0.738553
+2023-11-12 19:33:01,158 P1815304 INFO ************ Epoch=5 end ************
+2023-11-12 19:33:07,415 P1815304 INFO Train loss: 0.409027
+2023-11-12 19:33:07,416 P1815304 INFO Evaluation @epoch 6 - batch 141: 
+2023-11-12 19:33:09,206 P1815304 INFO ===
+2023-11-12 19:33:09,206 P1815304 INFO [Metrics] AUC: 0.962964 - logloss: 0.215555
+2023-11-12 19:33:09,206 P1815304 INFO Save best model: monitor(max)=0.747409
+2023-11-12 19:33:09,382 P1815304 INFO ************ Epoch=6 end ************
+2023-11-12 19:33:15,909 P1815304 INFO Train loss: 0.412803
+2023-11-12 19:33:15,910 P1815304 INFO Evaluation @epoch 7 - batch 141: 
+2023-11-12 19:33:17,676 P1815304 INFO ===
+2023-11-12 19:33:17,677 P1815304 INFO [Metrics] AUC: 0.963612 - logloss: 0.211641
+2023-11-12 19:33:17,677 P1815304 INFO Save best model: monitor(max)=0.751971
+2023-11-12 19:33:17,896 P1815304 INFO ************ Epoch=7 end ************
+2023-11-12 19:33:24,433 P1815304 INFO Train loss: 0.413376
+2023-11-12 19:33:24,434 P1815304 INFO Evaluation @epoch 8 - batch 141: 
+2023-11-12 19:33:26,000 P1815304 INFO ===
+2023-11-12 19:33:26,001 P1815304 INFO [Metrics] AUC: 0.964134 - logloss: 0.213071
+2023-11-12 19:33:26,001 P1815304 INFO Monitor(max)=0.751063 STOP!
+2023-11-12 19:33:26,001 P1815304 INFO Reduce learning rate on plateau: 0.000100
+2023-11-12 19:33:26,101 P1815304 INFO ************ Epoch=8 end ************
+2023-11-12 19:33:32,045 P1815304 INFO Train loss: 0.313578
+2023-11-12 19:33:32,046 P1815304 INFO Evaluation @epoch 9 - batch 141: 
+2023-11-12 19:33:33,665 P1815304 INFO ===
+2023-11-12 19:33:33,665 P1815304 INFO [Metrics] AUC: 0.970635 - logloss: 0.203113
+2023-11-12 19:33:33,666 P1815304 INFO Save best model: monitor(max)=0.767521
+2023-11-12 19:33:33,795 P1815304 INFO ************ Epoch=9 end ************
+2023-11-12 19:33:39,740 P1815304 INFO Train loss: 0.219970
+2023-11-12 19:33:39,740 P1815304 INFO Evaluation @epoch 10 - batch 141: 
+2023-11-12 19:33:41,202 P1815304 INFO ===
+2023-11-12 19:33:41,202 P1815304 INFO [Metrics] AUC: 0.971746 - logloss: 0.227033
+2023-11-12 19:33:41,202 P1815304 INFO Monitor(max)=0.744713 STOP!
+2023-11-12 19:33:41,202 P1815304 INFO Reduce learning rate on plateau: 0.000010
+2023-11-12 19:33:41,305 P1815304 INFO ************ Epoch=10 end ************
+2023-11-12 19:33:47,165 P1815304 INFO Train loss: 0.179008
+2023-11-12 19:33:47,165 P1815304 INFO Evaluation @epoch 11 - batch 141: 
+2023-11-12 19:33:48,599 P1815304 INFO ===
+2023-11-12 19:33:48,600 P1815304 INFO [Metrics] AUC: 0.971627 - logloss: 0.233442
+2023-11-12 19:33:48,600 P1815304 INFO Monitor(max)=0.738185 STOP!
+2023-11-12 19:33:48,600 P1815304 INFO Reduce learning rate on plateau: 0.000001
+2023-11-12 19:33:48,600 P1815304 INFO ********* Epoch==11 early stop *********
+2023-11-12 19:33:48,715 P1815304 INFO Training finished.
+2023-11-12 19:33:48,715 P1815304 INFO Load best model: /mnt/public/lhh/code/model_zoo/SimCEN/SimCEN_torch/checkpoints/Movielenslatest_x1_h5/SimCEN_xDeepFM_Movielens_1436_3a398e32.model
+2023-11-12 19:33:48,728 P1815304 INFO ****** Validation evaluation ******
+2023-11-12 19:33:50,336 P1815304 INFO ===
+2023-11-12 19:33:50,336 P1815304 INFO [Metrics] logloss: 0.203113 - AUC: 0.970635
+2023-11-12 19:33:50,418 P1815304 INFO ******** Test evaluation ********
+2023-11-12 19:33:50,418 P1815304 INFO Loading data...
+2023-11-12 19:33:50,418 P1815304 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/test.h5
+2023-11-12 19:33:50,424 P1815304 INFO Test samples: total/200686, blocks/1
+2023-11-12 19:33:50,424 P1815304 INFO Loading test data done.
+2023-11-12 19:33:51,422 P1815304 INFO ===
+2023-11-12 19:33:51,422 P1815304 INFO [Metrics] logloss: 0.203253 - AUC: 0.970578

@@ -1,0 +1,182 @@
+2023-11-15 11:31:41,861 P597704 INFO Params: {
+    "alpha": "0.04",
+    "batch_size": "10000",
+    "cl_temperature": "0.45",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Frappe_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.3",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.05",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user', 'item', 'daytime', 'weekday', 'isweekend', 'homework', 'cost', 'weather', 'country', 'city'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "2",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "mlep_hidden_units": "[480, 480, 480]",
+    "mlp_hidden_units": "[800, 400]",
+    "model": "SimCEN_MLP",
+    "model_id": "SimCEN_MLP_Frappe_x1_h5_994_db74b0ff",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Frappe_x1_h5/test.h5",
+    "through_dropout": "0",
+    "train_data": "../../../data/Frappe_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.2",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.4",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/Frappe_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-11-15 11:31:41,863 P597704 INFO Load feature_map from json: ../../../data/Frappe_x1_h5/feature_map.json
+2023-11-15 11:31:41,863 P597704 INFO Set column index...
+2023-11-15 11:31:41,863 P597704 INFO Feature specs: {
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 232, 'vocab_size': 233}",
+    "cost": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "country": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 81, 'vocab_size': 82}",
+    "daytime": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "homework": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "isweekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "item": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4083, 'vocab_size': 4084}",
+    "user": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 941, 'vocab_size': 942}",
+    "weather": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}"
+}
+2023-11-15 11:31:45,961 P597704 INFO Total number of parameters: 1330706.
+2023-11-15 11:31:45,961 P597704 INFO Loading data...
+2023-11-15 11:31:45,961 P597704 INFO Loading data from h5: ../../../data/Frappe_x1_h5/train.h5
+2023-11-15 11:31:45,986 P597704 INFO Train samples: total/202027, blocks/1
+2023-11-15 11:31:45,986 P597704 INFO Loading data from h5: ../../../data/Frappe_x1_h5/valid.h5
+2023-11-15 11:31:45,992 P597704 INFO Validation samples: total/57722, blocks/1
+2023-11-15 11:31:45,992 P597704 INFO Loading train and validation data done.
+2023-11-15 11:31:45,993 P597704 INFO Start training: 21 batches/epoch
+2023-11-15 11:31:45,993 P597704 INFO ************ Epoch=1 start ************
+2023-11-15 11:31:47,097 P597704 INFO Train loss: 0.856997
+2023-11-15 11:31:47,097 P597704 INFO Evaluation @epoch 1 - batch 21: 
+2023-11-15 11:31:47,742 P597704 INFO ===
+2023-11-15 11:31:47,742 P597704 INFO [Metrics] AUC: 0.923514 - logloss: 0.619887
+2023-11-15 11:31:47,742 P597704 INFO Save best model: monitor(max)=0.303627
+2023-11-15 11:31:47,837 P597704 INFO ************ Epoch=1 end ************
+2023-11-15 11:31:48,859 P597704 INFO Train loss: 0.671342
+2023-11-15 11:31:48,859 P597704 INFO Evaluation @epoch 2 - batch 21: 
+2023-11-15 11:31:49,421 P597704 INFO ===
+2023-11-15 11:31:49,421 P597704 INFO [Metrics] AUC: 0.936057 - logloss: 0.584981
+2023-11-15 11:31:49,421 P597704 INFO Save best model: monitor(max)=0.351076
+2023-11-15 11:31:49,542 P597704 INFO ************ Epoch=2 end ************
+2023-11-15 11:31:50,576 P597704 INFO Train loss: 0.600494
+2023-11-15 11:31:50,576 P597704 INFO Evaluation @epoch 3 - batch 21: 
+2023-11-15 11:31:51,147 P597704 INFO ===
+2023-11-15 11:31:51,147 P597704 INFO [Metrics] AUC: 0.949043 - logloss: 0.534982
+2023-11-15 11:31:51,148 P597704 INFO Save best model: monitor(max)=0.414061
+2023-11-15 11:31:51,265 P597704 INFO ************ Epoch=3 end ************
+2023-11-15 11:31:52,362 P597704 INFO Train loss: 0.538718
+2023-11-15 11:31:52,363 P597704 INFO Evaluation @epoch 4 - batch 21: 
+2023-11-15 11:31:52,925 P597704 INFO ===
+2023-11-15 11:31:52,935 P597704 INFO [Metrics] AUC: 0.969001 - logloss: 0.379412
+2023-11-15 11:31:52,935 P597704 INFO Save best model: monitor(max)=0.589589
+2023-11-15 11:31:53,060 P597704 INFO ************ Epoch=4 end ************
+2023-11-15 11:31:54,131 P597704 INFO Train loss: 0.494879
+2023-11-15 11:31:54,131 P597704 INFO Evaluation @epoch 5 - batch 21: 
+2023-11-15 11:31:54,694 P597704 INFO ===
+2023-11-15 11:31:54,694 P597704 INFO [Metrics] AUC: 0.977690 - logloss: 0.178343
+2023-11-15 11:31:54,694 P597704 INFO Save best model: monitor(max)=0.799347
+2023-11-15 11:31:54,825 P597704 INFO ************ Epoch=5 end ************
+2023-11-15 11:31:55,891 P597704 INFO Train loss: 0.466653
+2023-11-15 11:31:55,891 P597704 INFO Evaluation @epoch 6 - batch 21: 
+2023-11-15 11:31:56,476 P597704 INFO ===
+2023-11-15 11:31:56,476 P597704 INFO [Metrics] AUC: 0.979887 - logloss: 0.163932
+2023-11-15 11:31:56,476 P597704 INFO Save best model: monitor(max)=0.815956
+2023-11-15 11:31:56,612 P597704 INFO ************ Epoch=6 end ************
+2023-11-15 11:31:57,806 P597704 INFO Train loss: 0.448722
+2023-11-15 11:31:57,806 P597704 INFO Evaluation @epoch 7 - batch 21: 
+2023-11-15 11:31:58,374 P597704 INFO ===
+2023-11-15 11:31:58,374 P597704 INFO [Metrics] AUC: 0.981648 - logloss: 0.158639
+2023-11-15 11:31:58,374 P597704 INFO Save best model: monitor(max)=0.823009
+2023-11-15 11:31:58,483 P597704 INFO ************ Epoch=7 end ************
+2023-11-15 11:31:59,537 P597704 INFO Train loss: 0.434496
+2023-11-15 11:31:59,538 P597704 INFO Evaluation @epoch 8 - batch 21: 
+2023-11-15 11:32:00,093 P597704 INFO ===
+2023-11-15 11:32:00,093 P597704 INFO [Metrics] AUC: 0.982544 - logloss: 0.157083
+2023-11-15 11:32:00,094 P597704 INFO Save best model: monitor(max)=0.825461
+2023-11-15 11:32:00,231 P597704 INFO ************ Epoch=8 end ************
+2023-11-15 11:32:01,362 P597704 INFO Train loss: 0.429854
+2023-11-15 11:32:01,363 P597704 INFO Evaluation @epoch 9 - batch 21: 
+2023-11-15 11:32:01,927 P597704 INFO ===
+2023-11-15 11:32:01,927 P597704 INFO [Metrics] AUC: 0.982696 - logloss: 0.154794
+2023-11-15 11:32:01,928 P597704 INFO Save best model: monitor(max)=0.827901
+2023-11-15 11:32:02,054 P597704 INFO ************ Epoch=9 end ************
+2023-11-15 11:32:03,230 P597704 INFO Train loss: 0.422362
+2023-11-15 11:32:03,230 P597704 INFO Evaluation @epoch 10 - batch 21: 
+2023-11-15 11:32:03,811 P597704 INFO ===
+2023-11-15 11:32:03,811 P597704 INFO [Metrics] AUC: 0.983270 - logloss: 0.155658
+2023-11-15 11:32:03,811 P597704 INFO Monitor(max)=0.827612 STOP!
+2023-11-15 11:32:03,811 P597704 INFO Reduce learning rate on plateau: 0.000100
+2023-11-15 11:32:03,943 P597704 INFO ************ Epoch=10 end ************
+2023-11-15 11:32:05,039 P597704 INFO Train loss: 0.397179
+2023-11-15 11:32:05,039 P597704 INFO Evaluation @epoch 11 - batch 21: 
+2023-11-15 11:32:05,609 P597704 INFO ===
+2023-11-15 11:32:05,610 P597704 INFO [Metrics] AUC: 0.984254 - logloss: 0.151938
+2023-11-15 11:32:05,610 P597704 INFO Save best model: monitor(max)=0.832316
+2023-11-15 11:32:05,742 P597704 INFO ************ Epoch=11 end ************
+2023-11-15 11:32:06,883 P597704 INFO Train loss: 0.384472
+2023-11-15 11:32:06,883 P597704 INFO Evaluation @epoch 12 - batch 21: 
+2023-11-15 11:32:07,472 P597704 INFO ===
+2023-11-15 11:32:07,473 P597704 INFO [Metrics] AUC: 0.984762 - logloss: 0.147591
+2023-11-15 11:32:07,473 P597704 INFO Save best model: monitor(max)=0.837171
+2023-11-15 11:32:07,595 P597704 INFO ************ Epoch=12 end ************
+2023-11-15 11:32:08,741 P597704 INFO Train loss: 0.375718
+2023-11-15 11:32:08,742 P597704 INFO Evaluation @epoch 13 - batch 21: 
+2023-11-15 11:32:09,310 P597704 INFO ===
+2023-11-15 11:32:09,310 P597704 INFO [Metrics] AUC: 0.985050 - logloss: 0.147518
+2023-11-15 11:32:09,311 P597704 INFO Save best model: monitor(max)=0.837532
+2023-11-15 11:32:09,442 P597704 INFO ************ Epoch=13 end ************
+2023-11-15 11:32:10,580 P597704 INFO Train loss: 0.370453
+2023-11-15 11:32:10,581 P597704 INFO Evaluation @epoch 14 - batch 21: 
+2023-11-15 11:32:11,182 P597704 INFO ===
+2023-11-15 11:32:11,183 P597704 INFO [Metrics] AUC: 0.985107 - logloss: 0.148278
+2023-11-15 11:32:11,183 P597704 INFO Monitor(max)=0.836829 STOP!
+2023-11-15 11:32:11,183 P597704 INFO Reduce learning rate on plateau: 0.000010
+2023-11-15 11:32:11,274 P597704 INFO ************ Epoch=14 end ************
+2023-11-15 11:32:12,380 P597704 INFO Train loss: 0.364903
+2023-11-15 11:32:12,380 P597704 INFO Evaluation @epoch 15 - batch 21: 
+2023-11-15 11:32:12,960 P597704 INFO ===
+2023-11-15 11:32:12,960 P597704 INFO [Metrics] AUC: 0.985144 - logloss: 0.149257
+2023-11-15 11:32:12,961 P597704 INFO Monitor(max)=0.835886 STOP!
+2023-11-15 11:32:12,961 P597704 INFO Reduce learning rate on plateau: 0.000001
+2023-11-15 11:32:12,961 P597704 INFO ********* Epoch==15 early stop *********
+2023-11-15 11:32:13,081 P597704 INFO Training finished.
+2023-11-15 11:32:13,082 P597704 INFO Load best model: /mnt/public/lhh/code/model_zoo/SimCEN/SimCEN_torch/checkpoints/Frappe_x1_h5/SimCEN_MLP_Frappe_x1_h5_994_db74b0ff.model
+2023-11-15 11:32:13,096 P597704 INFO ****** Validation evaluation ******
+2023-11-15 11:32:13,668 P597704 INFO ===
+2023-11-15 11:32:13,668 P597704 INFO [Metrics] logloss: 0.147518 - AUC: 0.985050
+2023-11-15 11:32:13,712 P597704 INFO ******** Test evaluation ********
+2023-11-15 11:32:13,712 P597704 INFO Loading data...
+2023-11-15 11:32:13,712 P597704 INFO Loading data from h5: ../../../data/Frappe_x1_h5/test.h5
+2023-11-15 11:32:13,717 P597704 INFO Test samples: total/28860, blocks/1
+2023-11-15 11:32:13,717 P597704 INFO Loading test data done.
+2023-11-15 11:32:14,162 P597704 INFO ===
+2023-11-15 11:32:14,162 P597704 INFO [Metrics] logloss: 0.146190 - AUC: 0.985343

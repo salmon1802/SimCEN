@@ -1,0 +1,152 @@
+2023-11-04 17:27:45,444 P956460 INFO Params: {
+    "alpha": "0.01",
+    "batch_size": "10000",
+    "cl_temperature": "0.3",
+    "data_format": "csv",
+    "data_root": "../../../data/",
+    "dataset_id": "Movielenslatest_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.2",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.01",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user_id', 'item_id', 'tag_id'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "0",
+    "group_id": "None",
+    "hidden_units": "[480, 480, 480]",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "SimCENv27",
+    "model_id": "SimCENv27_Movielens",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/MovielensLatest_x1_h5/test.h5",
+    "through_dropout": "0.1",
+    "train_data": "../../../data/MovielensLatest_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.1",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.2",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/MovielensLatest_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-11-04 17:27:45,445 P956460 INFO Set up feature processor...
+2023-11-04 17:27:45,445 P956460 WARNING Skip rebuilding ../../../data/Movielenslatest_x1_h5/feature_map.json. Please delete it manually if rebuilding is required.
+2023-11-04 17:27:45,445 P956460 INFO Load feature_map from json: ../../../data/Movielenslatest_x1_h5/feature_map.json
+2023-11-04 17:27:45,445 P956460 INFO Set column index...
+2023-11-04 17:27:45,445 P956460 INFO Feature specs: {
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22574, 'vocab_size': 22575}",
+    "tag_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 49658, 'vocab_size': 49659}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16361, 'vocab_size': 16362}"
+}
+2023-11-04 17:27:50,761 P956460 INFO Total number of parameters: 2031809.
+2023-11-04 17:27:50,761 P956460 INFO Loading data...
+2023-11-04 17:27:50,761 P956460 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/train.h5
+2023-11-04 17:27:50,797 P956460 INFO Train samples: total/1404801, blocks/1
+2023-11-04 17:27:50,797 P956460 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/valid.h5
+2023-11-04 17:27:50,801 P956460 INFO Validation samples: total/401372, blocks/1
+2023-11-04 17:27:50,801 P956460 INFO Loading train and validation data done.
+2023-11-04 17:27:50,802 P956460 INFO Start training: 141 batches/epoch
+2023-11-04 17:27:50,802 P956460 INFO ************ Epoch=1 start ************
+2023-11-04 17:27:56,427 P956460 INFO Train loss: 0.487305
+2023-11-04 17:27:56,427 P956460 INFO Evaluation @epoch 1 - batch 141: 
+2023-11-04 17:27:58,342 P956460 INFO ===
+2023-11-04 17:27:58,342 P956460 INFO [Metrics] AUC: 0.937374 - logloss: 0.285729
+2023-11-04 17:27:58,342 P956460 INFO Save best model: monitor(max)=0.651645
+2023-11-04 17:27:58,508 P956460 INFO ************ Epoch=1 end ************
+2023-11-04 17:28:04,193 P956460 INFO Train loss: 0.411148
+2023-11-04 17:28:04,193 P956460 INFO Evaluation @epoch 2 - batch 141: 
+2023-11-04 17:28:06,074 P956460 INFO ===
+2023-11-04 17:28:06,074 P956460 INFO [Metrics] AUC: 0.948745 - logloss: 0.259372
+2023-11-04 17:28:06,075 P956460 INFO Save best model: monitor(max)=0.689373
+2023-11-04 17:28:06,251 P956460 INFO ************ Epoch=2 end ************
+2023-11-04 17:28:11,707 P956460 INFO Train loss: 0.408876
+2023-11-04 17:28:11,707 P956460 INFO Evaluation @epoch 3 - batch 141: 
+2023-11-04 17:28:13,762 P956460 INFO ===
+2023-11-04 17:28:13,762 P956460 INFO [Metrics] AUC: 0.955610 - logloss: 0.238147
+2023-11-04 17:28:13,762 P956460 INFO Save best model: monitor(max)=0.717463
+2023-11-04 17:28:13,929 P956460 INFO ************ Epoch=3 end ************
+2023-11-04 17:28:19,068 P956460 INFO Train loss: 0.407956
+2023-11-04 17:28:19,069 P956460 INFO Evaluation @epoch 4 - batch 141: 
+2023-11-04 17:28:21,039 P956460 INFO ===
+2023-11-04 17:28:21,039 P956460 INFO [Metrics] AUC: 0.958941 - logloss: 0.227341
+2023-11-04 17:28:21,039 P956460 INFO Save best model: monitor(max)=0.731600
+2023-11-04 17:28:21,209 P956460 INFO ************ Epoch=4 end ************
+2023-11-04 17:28:25,777 P956460 INFO Train loss: 0.410834
+2023-11-04 17:28:25,777 P956460 INFO Evaluation @epoch 5 - batch 141: 
+2023-11-04 17:28:27,663 P956460 INFO ===
+2023-11-04 17:28:27,663 P956460 INFO [Metrics] AUC: 0.961217 - logloss: 0.227040
+2023-11-04 17:28:27,663 P956460 INFO Save best model: monitor(max)=0.734177
+2023-11-04 17:28:27,825 P956460 INFO ************ Epoch=5 end ************
+2023-11-04 17:28:32,971 P956460 INFO Train loss: 0.415156
+2023-11-04 17:28:32,971 P956460 INFO Evaluation @epoch 6 - batch 141: 
+2023-11-04 17:28:34,834 P956460 INFO ===
+2023-11-04 17:28:34,834 P956460 INFO [Metrics] AUC: 0.962991 - logloss: 0.216395
+2023-11-04 17:28:34,834 P956460 INFO Save best model: monitor(max)=0.746596
+2023-11-04 17:28:35,016 P956460 INFO ************ Epoch=6 end ************
+2023-11-04 17:28:40,543 P956460 INFO Train loss: 0.418534
+2023-11-04 17:28:40,543 P956460 INFO Evaluation @epoch 7 - batch 141: 
+2023-11-04 17:28:42,604 P956460 INFO ===
+2023-11-04 17:28:42,604 P956460 INFO [Metrics] AUC: 0.963185 - logloss: 0.214467
+2023-11-04 17:28:42,604 P956460 INFO Save best model: monitor(max)=0.748718
+2023-11-04 17:28:42,773 P956460 INFO ************ Epoch=7 end ************
+2023-11-04 17:28:48,228 P956460 INFO Train loss: 0.421177
+2023-11-04 17:28:48,228 P956460 INFO Evaluation @epoch 8 - batch 141: 
+2023-11-04 17:28:50,111 P956460 INFO ===
+2023-11-04 17:28:50,111 P956460 INFO [Metrics] AUC: 0.963716 - logloss: 0.216594
+2023-11-04 17:28:50,111 P956460 INFO Monitor(max)=0.747122 STOP!
+2023-11-04 17:28:50,111 P956460 INFO Reduce learning rate on plateau: 0.000100
+2023-11-04 17:28:50,272 P956460 INFO ************ Epoch=8 end ************
+2023-11-04 17:28:55,916 P956460 INFO Train loss: 0.315652
+2023-11-04 17:28:55,916 P956460 INFO Evaluation @epoch 9 - batch 141: 
+2023-11-04 17:28:57,911 P956460 INFO ===
+2023-11-04 17:28:57,912 P956460 INFO [Metrics] AUC: 0.970150 - logloss: 0.206799
+2023-11-04 17:28:57,912 P956460 INFO Save best model: monitor(max)=0.763351
+2023-11-04 17:28:58,085 P956460 INFO ************ Epoch=9 end ************
+2023-11-04 17:29:03,765 P956460 INFO Train loss: 0.221228
+2023-11-04 17:29:03,766 P956460 INFO Evaluation @epoch 10 - batch 141: 
+2023-11-04 17:29:05,652 P956460 INFO ===
+2023-11-04 17:29:05,652 P956460 INFO [Metrics] AUC: 0.970167 - logloss: 0.236557
+2023-11-04 17:29:05,652 P956460 INFO Monitor(max)=0.733610 STOP!
+2023-11-04 17:29:05,652 P956460 INFO Reduce learning rate on plateau: 0.000010
+2023-11-04 17:29:05,819 P956460 INFO ************ Epoch=10 end ************
+2023-11-04 17:29:11,411 P956460 INFO Train loss: 0.180231
+2023-11-04 17:29:11,412 P956460 INFO Evaluation @epoch 11 - batch 141: 
+2023-11-04 17:29:13,456 P956460 INFO ===
+2023-11-04 17:29:13,456 P956460 INFO [Metrics] AUC: 0.970043 - logloss: 0.247389
+2023-11-04 17:29:13,456 P956460 INFO Monitor(max)=0.722654 STOP!
+2023-11-04 17:29:13,456 P956460 INFO Reduce learning rate on plateau: 0.000001
+2023-11-04 17:29:13,456 P956460 INFO ********* Epoch==11 early stop *********
+2023-11-04 17:29:13,621 P956460 INFO Training finished.
+2023-11-04 17:29:13,621 P956460 INFO Load best model: /root/autodl-tmp/model_zoo/SimCEN/xCEMLP_torch/checkpoints/Movielenslatest_x1_h5/SimCENv27_Movielens.model
+2023-11-04 17:29:13,639 P956460 INFO ****** Validation evaluation ******
+2023-11-04 17:29:15,703 P956460 INFO ===
+2023-11-04 17:29:15,703 P956460 INFO [Metrics] logloss: 0.206799 - AUC: 0.970150
+2023-11-04 17:29:15,754 P956460 INFO ******** Test evaluation ********
+2023-11-04 17:29:15,754 P956460 INFO Loading data...
+2023-11-04 17:29:15,754 P956460 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/test.h5
+2023-11-04 17:29:15,757 P956460 INFO Test samples: total/200686, blocks/1
+2023-11-04 17:29:15,757 P956460 INFO Loading test data done.
+2023-11-04 17:29:17,255 P956460 INFO ===
+2023-11-04 17:29:17,255 P956460 INFO [Metrics] logloss: 0.206596 - AUC: 0.970368

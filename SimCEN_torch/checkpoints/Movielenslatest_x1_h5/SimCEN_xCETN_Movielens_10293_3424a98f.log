@@ -1,0 +1,164 @@
+2023-12-16 17:05:01,454 P770633 INFO Params: {
+    "alpha": "0.02",
+    "batch_size": "10000",
+    "cl_temperature": "0.3",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Movielenslatest_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.1",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.01",
+    "embedding_share": "False",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user_id', 'item_id', 'tag_id'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "1",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "mlep1_hidden_units": "[480, 480, 480]",
+    "mlep2_hidden_units": "[480]",
+    "model": "SimCEN_SimCEN",
+    "model_id": "SimCEN_SimCEN_Movielens_10293_3424a98f",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Movielenslatest_x1_h5/test.h5",
+    "through_dropout": "0.1",
+    "train_data": "../../../data/Movielenslatest_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.3",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.1",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/Movielenslatest_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-12-16 17:05:01,456 P770633 INFO Load feature_map from json: ../../../data/Movielenslatest_x1_h5/feature_map.json
+2023-12-16 17:05:01,456 P770633 INFO Set column index...
+2023-12-16 17:05:01,456 P770633 INFO Feature specs: {
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 22574, 'vocab_size': 22575}",
+    "tag_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 49658, 'vocab_size': 49659}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 16361, 'vocab_size': 16362}"
+}
+2023-12-16 17:05:09,382 P770633 INFO Total number of parameters: 3547457.
+2023-12-16 17:05:09,382 P770633 INFO Loading data...
+2023-12-16 17:05:09,382 P770633 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/train.h5
+2023-12-16 17:05:09,421 P770633 INFO Train samples: total/1404801, blocks/1
+2023-12-16 17:05:09,421 P770633 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/valid.h5
+2023-12-16 17:05:09,425 P770633 INFO Validation samples: total/401372, blocks/1
+2023-12-16 17:05:09,425 P770633 INFO Loading train and validation data done.
+2023-12-16 17:05:09,426 P770633 INFO Start training: 141 batches/epoch
+2023-12-16 17:05:09,426 P770633 INFO ************ Epoch=1 start ************
+2023-12-16 17:05:17,697 P770633 INFO Train loss: 0.710305
+2023-12-16 17:05:17,697 P770633 INFO Evaluation @epoch 1 - batch 141: 
+2023-12-16 17:05:19,555 P770633 INFO ===
+2023-12-16 17:05:19,556 P770633 INFO [Metrics] AUC: 0.934699 - logloss: 0.425905
+2023-12-16 17:05:19,556 P770633 INFO Save best model: monitor(max)=0.508794
+2023-12-16 17:05:19,877 P770633 INFO ************ Epoch=1 end ************
+2023-12-16 17:05:28,769 P770633 INFO Train loss: 0.657806
+2023-12-16 17:05:28,769 P770633 INFO Evaluation @epoch 2 - batch 141: 
+2023-12-16 17:05:30,817 P770633 INFO ===
+2023-12-16 17:05:30,817 P770633 INFO [Metrics] AUC: 0.949859 - logloss: 0.328177
+2023-12-16 17:05:30,817 P770633 INFO Save best model: monitor(max)=0.621682
+2023-12-16 17:05:31,072 P770633 INFO ************ Epoch=2 end ************
+2023-12-16 17:05:40,276 P770633 INFO Train loss: 0.658774
+2023-12-16 17:05:40,276 P770633 INFO Evaluation @epoch 3 - batch 141: 
+2023-12-16 17:05:42,252 P770633 INFO ===
+2023-12-16 17:05:42,252 P770633 INFO [Metrics] AUC: 0.955675 - logloss: 0.236992
+2023-12-16 17:05:42,253 P770633 INFO Save best model: monitor(max)=0.718683
+2023-12-16 17:05:42,632 P770633 INFO ************ Epoch=3 end ************
+2023-12-16 17:05:51,626 P770633 INFO Train loss: 0.661262
+2023-12-16 17:05:51,626 P770633 INFO Evaluation @epoch 4 - batch 141: 
+2023-12-16 17:05:53,958 P770633 INFO ===
+2023-12-16 17:05:53,958 P770633 INFO [Metrics] AUC: 0.958719 - logloss: 0.230313
+2023-12-16 17:05:53,958 P770633 INFO Save best model: monitor(max)=0.728407
+2023-12-16 17:05:54,270 P770633 INFO ************ Epoch=4 end ************
+2023-12-16 17:06:02,823 P770633 INFO Train loss: 0.664463
+2023-12-16 17:06:02,823 P770633 INFO Evaluation @epoch 5 - batch 141: 
+2023-12-16 17:06:04,703 P770633 INFO ===
+2023-12-16 17:06:04,703 P770633 INFO [Metrics] AUC: 0.959577 - logloss: 0.224009
+2023-12-16 17:06:04,703 P770633 INFO Save best model: monitor(max)=0.735568
+2023-12-16 17:06:04,900 P770633 INFO ************ Epoch=5 end ************
+2023-12-16 17:06:12,889 P770633 INFO Train loss: 0.669080
+2023-12-16 17:06:12,889 P770633 INFO Evaluation @epoch 6 - batch 141: 
+2023-12-16 17:06:14,683 P770633 INFO ===
+2023-12-16 17:06:14,684 P770633 INFO [Metrics] AUC: 0.961077 - logloss: 0.219798
+2023-12-16 17:06:14,684 P770633 INFO Save best model: monitor(max)=0.741279
+2023-12-16 17:06:14,894 P770633 INFO ************ Epoch=6 end ************
+2023-12-16 17:06:22,385 P770633 INFO Train loss: 0.670191
+2023-12-16 17:06:22,386 P770633 INFO Evaluation @epoch 7 - batch 141: 
+2023-12-16 17:06:24,100 P770633 INFO ===
+2023-12-16 17:06:24,100 P770633 INFO [Metrics] AUC: 0.961632 - logloss: 0.220169
+2023-12-16 17:06:24,100 P770633 INFO Save best model: monitor(max)=0.741463
+2023-12-16 17:06:24,351 P770633 INFO ************ Epoch=7 end ************
+2023-12-16 17:06:32,046 P770633 INFO Train loss: 0.675686
+2023-12-16 17:06:32,046 P770633 INFO Evaluation @epoch 8 - batch 141: 
+2023-12-16 17:06:33,940 P770633 INFO ===
+2023-12-16 17:06:33,940 P770633 INFO [Metrics] AUC: 0.962143 - logloss: 0.215593
+2023-12-16 17:06:33,941 P770633 INFO Save best model: monitor(max)=0.746550
+2023-12-16 17:06:34,221 P770633 INFO ************ Epoch=8 end ************
+2023-12-16 17:06:42,682 P770633 INFO Train loss: 0.678917
+2023-12-16 17:06:42,683 P770633 INFO Evaluation @epoch 9 - batch 141: 
+2023-12-16 17:06:44,980 P770633 INFO ===
+2023-12-16 17:06:44,980 P770633 INFO [Metrics] AUC: 0.962808 - logloss: 0.211146
+2023-12-16 17:06:44,980 P770633 INFO Save best model: monitor(max)=0.751662
+2023-12-16 17:06:45,241 P770633 INFO ************ Epoch=9 end ************
+2023-12-16 17:06:54,499 P770633 INFO Train loss: 0.676249
+2023-12-16 17:06:54,499 P770633 INFO Evaluation @epoch 10 - batch 141: 
+2023-12-16 17:06:56,680 P770633 INFO ===
+2023-12-16 17:06:56,680 P770633 INFO [Metrics] AUC: 0.963341 - logloss: 0.253564
+2023-12-16 17:06:56,680 P770633 INFO Monitor(max)=0.709777 STOP!
+2023-12-16 17:06:56,681 P770633 INFO Reduce learning rate on plateau: 0.000100
+2023-12-16 17:06:56,969 P770633 INFO ************ Epoch=10 end ************
+2023-12-16 17:07:06,210 P770633 INFO Train loss: 0.539628
+2023-12-16 17:07:06,211 P770633 INFO Evaluation @epoch 11 - batch 141: 
+2023-12-16 17:07:08,371 P770633 INFO ===
+2023-12-16 17:07:08,371 P770633 INFO [Metrics] AUC: 0.972319 - logloss: 0.189641
+2023-12-16 17:07:08,372 P770633 INFO Save best model: monitor(max)=0.782678
+2023-12-16 17:07:08,732 P770633 INFO ************ Epoch=11 end ************
+2023-12-16 17:07:17,389 P770633 INFO Train loss: 0.412710
+2023-12-16 17:07:17,389 P770633 INFO Evaluation @epoch 12 - batch 141: 
+2023-12-16 17:07:19,244 P770633 INFO ===
+2023-12-16 17:07:19,244 P770633 INFO [Metrics] AUC: 0.972690 - logloss: 0.220023
+2023-12-16 17:07:19,245 P770633 INFO Monitor(max)=0.752667 STOP!
+2023-12-16 17:07:19,245 P770633 INFO Reduce learning rate on plateau: 0.000010
+2023-12-16 17:07:19,447 P770633 INFO ************ Epoch=12 end ************
+2023-12-16 17:07:27,263 P770633 INFO Train loss: 0.368034
+2023-12-16 17:07:27,263 P770633 INFO Evaluation @epoch 13 - batch 141: 
+2023-12-16 17:07:28,922 P770633 INFO ===
+2023-12-16 17:07:28,922 P770633 INFO [Metrics] AUC: 0.972779 - logloss: 0.215312
+2023-12-16 17:07:28,922 P770633 INFO Monitor(max)=0.757467 STOP!
+2023-12-16 17:07:28,922 P770633 INFO Reduce learning rate on plateau: 0.000001
+2023-12-16 17:07:28,922 P770633 INFO ********* Epoch==13 early stop *********
+2023-12-16 17:07:29,123 P770633 INFO Training finished.
+2023-12-16 17:07:29,123 P770633 INFO Load best model: /root/autodl-tmp/model_zoo/SimCEN/SimCEN_torch/checkpoints/Movielenslatest_x1_h5/SimCEN_SimCEN_Movielens_10293_3424a98f.model
+2023-12-16 17:07:29,175 P770633 INFO ****** Validation evaluation ******
+2023-12-16 17:07:30,865 P770633 INFO ===
+2023-12-16 17:07:30,866 P770633 INFO [Metrics] logloss: 0.189641 - AUC: 0.972319
+2023-12-16 17:07:30,906 P770633 INFO ******** Test evaluation ********
+2023-12-16 17:07:30,906 P770633 INFO Loading data...
+2023-12-16 17:07:30,907 P770633 INFO Loading data from h5: ../../../data/Movielenslatest_x1_h5/test.h5
+2023-12-16 17:07:30,909 P770633 INFO Test samples: total/200686, blocks/1
+2023-12-16 17:07:30,909 P770633 INFO Loading test data done.
+2023-12-16 17:07:32,215 P770633 INFO ===
+2023-12-16 17:07:32,215 P770633 INFO [Metrics] logloss: 0.188770 - AUC: 0.972747

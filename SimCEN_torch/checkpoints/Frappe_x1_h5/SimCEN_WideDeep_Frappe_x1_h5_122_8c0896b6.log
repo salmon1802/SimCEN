@@ -1,0 +1,157 @@
+2023-11-12 00:24:32,372 P185797 INFO Params: {
+    "alpha": "0.01",
+    "batch_size": "10000",
+    "cl_temperature": "0.4",
+    "data_format": "h5",
+    "data_root": "../../../data/",
+    "dataset_id": "Frappe_x1_h5",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.1",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "16",
+    "embedding_regularizer": "0.05",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user', 'item', 'daytime', 'weekday', 'isweekend', 'homework', 'cost', 'weather', 'country', 'city'], 'type': 'categorical'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "0",
+    "group_id": "None",
+    "hidden_units": "[480, 480, 480]",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "2",
+    "model": "SimCEN_WideDeep",
+    "model_id": "SimCEN_WideDeep_Frappe_x1_h5_122_8c0896b6",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "4",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/Frappe_x1_h5/test.h5",
+    "through_dropout": "0.2",
+    "train_data": "../../../data/Frappe_x1_h5/train.h5",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.3",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.1",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/Frappe_x1_h5/valid.h5",
+    "verbose": "1"
+}
+2023-11-12 00:24:32,372 P185797 INFO Load feature_map from json: ../../../data/Frappe_x1_h5/feature_map.json
+2023-11-12 00:24:32,372 P185797 INFO Set column index...
+2023-11-12 00:24:32,372 P185797 INFO Feature specs: {
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 232, 'vocab_size': 233}",
+    "cost": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "country": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 81, 'vocab_size': 82}",
+    "daytime": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "homework": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "isweekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "item": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4083, 'vocab_size': 4084}",
+    "user": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 941, 'vocab_size': 942}",
+    "weather": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}"
+}
+2023-11-12 00:24:38,628 P185797 INFO Total number of parameters: 884088.
+2023-11-12 00:24:38,628 P185797 INFO Loading data...
+2023-11-12 00:24:38,628 P185797 INFO Loading data from h5: ../../../data/Frappe_x1_h5/train.h5
+2023-11-12 00:24:38,644 P185797 INFO Train samples: total/202027, blocks/1
+2023-11-12 00:24:38,644 P185797 INFO Loading data from h5: ../../../data/Frappe_x1_h5/valid.h5
+2023-11-12 00:24:38,647 P185797 INFO Validation samples: total/57722, blocks/1
+2023-11-12 00:24:38,647 P185797 INFO Loading train and validation data done.
+2023-11-12 00:24:38,648 P185797 INFO Start training: 21 batches/epoch
+2023-11-12 00:24:38,648 P185797 INFO ************ Epoch=1 start ************
+2023-11-12 00:24:41,161 P185797 INFO Train loss: 0.528405
+2023-11-12 00:24:41,162 P185797 INFO Evaluation @epoch 1 - batch 21: 
+2023-11-12 00:24:42,748 P185797 INFO ===
+2023-11-12 00:24:42,748 P185797 INFO [Metrics] AUC: 0.927590 - logloss: 0.618616
+2023-11-12 00:24:42,748 P185797 INFO Save best model: monitor(max)=0.308974
+2023-11-12 00:24:42,934 P185797 INFO ************ Epoch=1 end ************
+2023-11-12 00:24:45,571 P185797 INFO Train loss: 0.394883
+2023-11-12 00:24:45,571 P185797 INFO Evaluation @epoch 2 - batch 21: 
+2023-11-12 00:24:47,089 P185797 INFO ===
+2023-11-12 00:24:47,089 P185797 INFO [Metrics] AUC: 0.935412 - logloss: 0.583380
+2023-11-12 00:24:47,089 P185797 INFO Save best model: monitor(max)=0.352032
+2023-11-12 00:24:47,240 P185797 INFO ************ Epoch=2 end ************
+2023-11-12 00:24:49,825 P185797 INFO Train loss: 0.323985
+2023-11-12 00:24:49,825 P185797 INFO Evaluation @epoch 3 - batch 21: 
+2023-11-12 00:24:51,389 P185797 INFO ===
+2023-11-12 00:24:51,389 P185797 INFO [Metrics] AUC: 0.940059 - logloss: 0.585925
+2023-11-12 00:24:51,390 P185797 INFO Save best model: monitor(max)=0.354134
+2023-11-12 00:24:51,584 P185797 INFO ************ Epoch=3 end ************
+2023-11-12 00:24:54,641 P185797 INFO Train loss: 0.274574
+2023-11-12 00:24:54,641 P185797 INFO Evaluation @epoch 4 - batch 21: 
+2023-11-12 00:24:56,282 P185797 INFO ===
+2023-11-12 00:24:56,282 P185797 INFO [Metrics] AUC: 0.969827 - logloss: 0.329923
+2023-11-12 00:24:56,282 P185797 INFO Save best model: monitor(max)=0.639904
+2023-11-12 00:24:56,452 P185797 INFO ************ Epoch=4 end ************
+2023-11-12 00:24:59,087 P185797 INFO Train loss: 0.247915
+2023-11-12 00:24:59,087 P185797 INFO Evaluation @epoch 5 - batch 21: 
+2023-11-12 00:25:00,808 P185797 INFO ===
+2023-11-12 00:25:00,809 P185797 INFO [Metrics] AUC: 0.976508 - logloss: 0.176535
+2023-11-12 00:25:00,809 P185797 INFO Save best model: monitor(max)=0.799972
+2023-11-12 00:25:00,998 P185797 INFO ************ Epoch=5 end ************
+2023-11-12 00:25:03,834 P185797 INFO Train loss: 0.231799
+2023-11-12 00:25:03,834 P185797 INFO Evaluation @epoch 6 - batch 21: 
+2023-11-12 00:25:05,644 P185797 INFO ===
+2023-11-12 00:25:05,645 P185797 INFO [Metrics] AUC: 0.979842 - logloss: 0.248216
+2023-11-12 00:25:05,645 P185797 INFO Monitor(max)=0.731627 STOP!
+2023-11-12 00:25:05,645 P185797 INFO Reduce learning rate on plateau: 0.000100
+2023-11-12 00:25:05,964 P185797 INFO ************ Epoch=6 end ************
+2023-11-12 00:25:09,025 P185797 INFO Train loss: 0.197879
+2023-11-12 00:25:09,026 P185797 INFO Evaluation @epoch 7 - batch 21: 
+2023-11-12 00:25:10,537 P185797 INFO ===
+2023-11-12 00:25:10,538 P185797 INFO [Metrics] AUC: 0.983373 - logloss: 0.152720
+2023-11-12 00:25:10,538 P185797 INFO Save best model: monitor(max)=0.830653
+2023-11-12 00:25:10,736 P185797 INFO ************ Epoch=7 end ************
+2023-11-12 00:25:13,302 P185797 INFO Train loss: 0.183254
+2023-11-12 00:25:13,302 P185797 INFO Evaluation @epoch 8 - batch 21: 
+2023-11-12 00:25:14,940 P185797 INFO ===
+2023-11-12 00:25:14,940 P185797 INFO [Metrics] AUC: 0.984008 - logloss: 0.150270
+2023-11-12 00:25:14,940 P185797 INFO Save best model: monitor(max)=0.833738
+2023-11-12 00:25:15,107 P185797 INFO ************ Epoch=8 end ************
+2023-11-12 00:25:18,666 P185797 INFO Train loss: 0.173156
+2023-11-12 00:25:18,666 P185797 INFO Evaluation @epoch 9 - batch 21: 
+2023-11-12 00:25:21,189 P185797 INFO ===
+2023-11-12 00:25:21,189 P185797 INFO [Metrics] AUC: 0.984301 - logloss: 0.149829
+2023-11-12 00:25:21,189 P185797 INFO Save best model: monitor(max)=0.834472
+2023-11-12 00:25:21,380 P185797 INFO ************ Epoch=9 end ************
+2023-11-12 00:25:24,067 P185797 INFO Train loss: 0.165597
+2023-11-12 00:25:24,067 P185797 INFO Evaluation @epoch 10 - batch 21: 
+2023-11-12 00:25:25,705 P185797 INFO ===
+2023-11-12 00:25:25,705 P185797 INFO [Metrics] AUC: 0.984483 - logloss: 0.150960
+2023-11-12 00:25:25,705 P185797 INFO Monitor(max)=0.833523 STOP!
+2023-11-12 00:25:25,705 P185797 INFO Reduce learning rate on plateau: 0.000010
+2023-11-12 00:25:25,873 P185797 INFO ************ Epoch=10 end ************
+2023-11-12 00:25:28,638 P185797 INFO Train loss: 0.160154
+2023-11-12 00:25:28,638 P185797 INFO Evaluation @epoch 11 - batch 21: 
+2023-11-12 00:25:30,893 P185797 INFO ===
+2023-11-12 00:25:30,893 P185797 INFO [Metrics] AUC: 0.984518 - logloss: 0.153858
+2023-11-12 00:25:30,893 P185797 INFO Monitor(max)=0.830660 STOP!
+2023-11-12 00:25:30,893 P185797 INFO Reduce learning rate on plateau: 0.000001
+2023-11-12 00:25:30,893 P185797 INFO ********* Epoch==11 early stop *********
+2023-11-12 00:25:31,064 P185797 INFO Training finished.
+2023-11-12 00:25:31,064 P185797 INFO Load best model: /root/autodl-tmp/model_zoo/SimCEN/SimCEN_torch/checkpoints/Frappe_x1_h5/SimCEN_WideDeep_Frappe_x1_h5_122_8c0896b6.model
+2023-11-12 00:25:31,097 P185797 INFO ****** Validation evaluation ******
+2023-11-12 00:25:33,740 P185797 INFO ===
+2023-11-12 00:25:33,740 P185797 INFO [Metrics] logloss: 0.149829 - AUC: 0.984301
+2023-11-12 00:25:33,776 P185797 INFO ******** Test evaluation ********
+2023-11-12 00:25:33,776 P185797 INFO Loading data...
+2023-11-12 00:25:33,776 P185797 INFO Loading data from h5: ../../../data/Frappe_x1_h5/test.h5
+2023-11-12 00:25:33,779 P185797 INFO Test samples: total/28860, blocks/1
+2023-11-12 00:25:33,779 P185797 INFO Loading test data done.
+2023-11-12 00:25:35,419 P185797 INFO ===
+2023-11-12 00:25:35,419 P185797 INFO [Metrics] logloss: 0.151464 - AUC: 0.983802
