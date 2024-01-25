@@ -1,7 +1,8 @@
 # SimCEN: Simple Contrast-enhanced Network for CTR Prediction
 
 ## Model Overview
-![image](https://github.com/salmon1802/xCETN/assets/73091798/ec3eadf2-3ef9-48e7-b19a-6699199fc4e8)
+![image](https://github.com/salmon1802/SimCEN/assets/73091798/383fbc75-38c4-4ed6-a6f2-596fdfd646ed)
+
 
 ## Requirements
 python>=3.6  
@@ -15,8 +16,7 @@ h5py
 tqdm  
 
 ## Experiment results
-![image](https://github.com/salmon1802/xCETN/assets/73091798/bc44bf05-ac09-426e-8b10-3beebd1d831d)
-
+![image](https://github.com/salmon1802/SimCEN/assets/73091798/fe3ae7bc-f074-4b98-bca8-af524061ac7c)
 
 
 ## Datasets
