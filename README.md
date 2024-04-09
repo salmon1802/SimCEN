@@ -1,7 +1,8 @@
 # SimCEN: Simple Contrast-enhanced Network for CTR Prediction
 
 ## Model Overview
-![image](https://github.com/salmon1802/SimCEN/assets/73091798/383fbc75-38c4-4ed6-a6f2-596fdfd646ed)
+![image](https://github.com/salmon1802/SimCEN/assets/73091798/b281fc0e-97f0-4d24-82bf-f980e3ba3833)
+
 
 
 ## Requirements
