@@ -1,0 +1,171 @@
+2024-04-02 01:51:02,049 P4048189 INFO Params: {
+    "alpha": "0.01",
+    "batch_size": "10000",
+    "cl_temperature": "0.3",
+    "data_format": "csv",
+    "data_root": "../../../data/KuaiShou/",
+    "dataset_id": "kuaivideo_x1",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "ego_batch_norm": "True",
+    "ego_dropout": "0.1",
+    "ego_hidden_activations": "relu",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.0005",
+    "embedding_share": "True",
+    "epochs": "100",
+    "eval_steps": "None",
+    "feature_cols": "[{'active': True, 'dtype': 'int', 'name': 'group_id', 'preprocess': 'copy_from(user_id)', 'remap': False, 'type': 'meta'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'name': 'item_id', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'embedding_dim': 64, 'min_categr_count': 1, 'name': 'item_emb', 'preprocess': 'copy_from(item_id)', 'pretrained_emb': '../../../data/KuaiVideo_x1/item_visual_emb_dim64.h5', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'max_len': 100, 'name': 'pos_items', 'padding': 'pre', 'share_embedding': 'item_id', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'max_len': 100, 'name': 'neg_items', 'padding': 'pre', 'share_embedding': 'item_id', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'embedding_dim': 64, 'max_len': 100, 'min_categr_count': 1, 'name': 'pos_items_emb', 'padding': 'pre', 'preprocess': 'copy_from(pos_items)', 'pretrained_emb': '../../../data/KuaiVideo_x1/item_visual_emb_dim64.h5', 'share_embedding': 'item_emb', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'embedding_dim': 64, 'max_len': 100, 'min_categr_count': 1, 'name': 'neg_items_emb', 'padding': 'pre', 'preprocess': 'copy_from(neg_items)', 'pretrained_emb': '../../../data/KuaiVideo_x1/item_visual_emb_dim64.h5', 'share_embedding': 'item_emb', 'splitter': '^', 'type': 'sequence'}]",
+    "feature_config": "None",
+    "feature_specs": "None",
+    "gpu": "1",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'is_click'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['logloss', 'AUC']",
+    "min_categr_count": "10",
+    "mlep1_hidden_units": "[480, 480, 480]",
+    "mlep2_hidden_units": "[480, 480]",
+    "model": "SimCEN_SimCENv2",
+    "model_id": "SimCEN_SimCEN_kuaivideo_x1_036_dd62371c",
+    "model_root": "./checkpoints/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "6",
+    "optimizer": "adam",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2023",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../../../data/KuaiVideo_x1/test.csv",
+    "through_dropout": "0.2",
+    "train_data": "../../../data/KuaiVideo_x1/train.csv",
+    "use_features": "None",
+    "v1_batch_norm": "True",
+    "v1_dropout": "0.3",
+    "v1_hidden_activations": "mish",
+    "v2_batch_norm": "True",
+    "v2_dropout": "0.3",
+    "v2_hidden_activations": "gelu",
+    "valid_data": "../../../data/KuaiVideo_x1/test.csv",
+    "verbose": "1"
+}
+2024-04-02 01:51:02,050 P4048189 INFO Set up feature processor...
+2024-04-02 01:51:02,050 P4048189 WARNING Skip rebuilding ../../../data/KuaiShou/kuaivideo_x1/feature_map.json. Please delete it manually if rebuilding is required.
+2024-04-02 01:51:02,051 P4048189 INFO Load feature_map from json: ../../../data/KuaiShou/kuaivideo_x1/feature_map.json
+2024-04-02 01:51:02,051 P4048189 INFO Set column index...
+2024-04-02 01:51:02,051 P4048189 INFO Feature specs: {
+    "group_id": "{'type': 'meta'}",
+    "item_emb": "{'source': '', 'type': 'categorical', 'embedding_dim': 64, 'pretrained_emb': 'pretrained_emb.h5', 'freeze_emb': True, 'padding_idx': 0, 'oov_idx': 3242316, 'vocab_size': 3242317}",
+    "item_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 632405, 'vocab_size': 632406}",
+    "neg_items": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'share_embedding': 'item_id', 'padding_idx': 0, 'oov_idx': 632405, 'vocab_size': 632406, 'max_len': 100}",
+    "neg_items_emb": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'embedding_dim': 64, 'share_embedding': 'item_emb', 'padding_idx': 0, 'oov_idx': 3242316, 'vocab_size': 3242317, 'max_len': 100}",
+    "pos_items": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'share_embedding': 'item_id', 'padding_idx': 0, 'oov_idx': 632405, 'vocab_size': 632406, 'max_len': 100}",
+    "pos_items_emb": "{'source': '', 'type': 'sequence', 'feature_encoder': 'layers.MaskedAveragePooling()', 'embedding_dim': 64, 'share_embedding': 'item_emb', 'padding_idx': 0, 'oov_idx': 3242316, 'vocab_size': 3242317, 'max_len': 100}",
+    "user_id": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10001, 'vocab_size': 10002}"
+}
+2024-04-02 01:51:09,026 P4048189 INFO Total number of parameters: 43264097.
+2024-04-02 01:51:09,026 P4048189 INFO Loading data...
+2024-04-02 01:51:09,026 P4048189 INFO Loading data from h5: ../../../data/KuaiShou/kuaivideo_x1/train.h5
+2024-04-02 01:51:31,087 P4048189 INFO Train samples: total/10931092, blocks/1
+2024-04-02 01:51:31,087 P4048189 INFO Loading data from h5: ../../../data/KuaiShou/kuaivideo_x1/valid.h5
+2024-04-02 01:51:38,832 P4048189 INFO Validation samples: total/2730291, blocks/1
+2024-04-02 01:51:38,832 P4048189 INFO Loading train and validation data done.
+2024-04-02 01:51:38,832 P4048189 INFO Start training: 1094 batches/epoch
+2024-04-02 01:51:38,832 P4048189 INFO ************ Epoch=1 start ************
+2024-04-02 01:52:53,892 P4048189 INFO Train loss: 0.616455
+2024-04-02 01:52:53,893 P4048189 INFO Evaluation @epoch 1 - batch 1094: 
+2024-04-02 01:53:06,723 P4048189 INFO ===
+2024-04-02 01:53:06,724 P4048189 INFO [Metrics] AUC: 0.722219 - logloss: 0.442988
+2024-04-02 01:53:06,729 P4048189 INFO Save best model: monitor(max)=0.279231
+2024-04-02 01:53:10,032 P4048189 INFO ************ Epoch=1 end ************
+2024-04-02 01:54:26,652 P4048189 INFO Train loss: 0.592219
+2024-04-02 01:54:26,653 P4048189 INFO Evaluation @epoch 2 - batch 1094: 
+2024-04-02 01:54:39,002 P4048189 INFO ===
+2024-04-02 01:54:39,003 P4048189 INFO [Metrics] AUC: 0.728579 - logloss: 0.440946
+2024-04-02 01:54:39,009 P4048189 INFO Save best model: monitor(max)=0.287633
+2024-04-02 01:54:45,470 P4048189 INFO ************ Epoch=2 end ************
+2024-04-02 01:56:01,998 P4048189 INFO Train loss: 0.584602
+2024-04-02 01:56:01,998 P4048189 INFO Evaluation @epoch 3 - batch 1094: 
+2024-04-02 01:56:15,310 P4048189 INFO ===
+2024-04-02 01:56:15,311 P4048189 INFO [Metrics] AUC: 0.730351 - logloss: 0.441377
+2024-04-02 01:56:15,311 P4048189 INFO Save best model: monitor(max)=0.288974
+2024-04-02 01:56:22,409 P4048189 INFO ************ Epoch=3 end ************
+2024-04-02 01:57:40,032 P4048189 INFO Train loss: 0.581345
+2024-04-02 01:57:40,032 P4048189 INFO Evaluation @epoch 4 - batch 1094: 
+2024-04-02 01:57:53,065 P4048189 INFO ===
+2024-04-02 01:57:53,066 P4048189 INFO [Metrics] AUC: 0.737705 - logloss: 0.435406
+2024-04-02 01:57:53,070 P4048189 INFO Save best model: monitor(max)=0.302298
+2024-04-02 01:57:58,760 P4048189 INFO ************ Epoch=4 end ************
+2024-04-02 01:59:14,112 P4048189 INFO Train loss: 0.581469
+2024-04-02 01:59:14,112 P4048189 INFO Evaluation @epoch 5 - batch 1094: 
+2024-04-02 01:59:26,592 P4048189 INFO ===
+2024-04-02 01:59:26,592 P4048189 INFO [Metrics] AUC: 0.737618 - logloss: 0.434469
+2024-04-02 01:59:26,598 P4048189 INFO Save best model: monitor(max)=0.303149
+2024-04-02 01:59:33,283 P4048189 INFO ************ Epoch=5 end ************
+2024-04-02 02:00:51,094 P4048189 INFO Train loss: 0.581447
+2024-04-02 02:00:51,095 P4048189 INFO Evaluation @epoch 6 - batch 1094: 
+2024-04-02 02:01:04,278 P4048189 INFO ===
+2024-04-02 02:01:04,278 P4048189 INFO [Metrics] AUC: 0.740023 - logloss: 0.435374
+2024-04-02 02:01:04,284 P4048189 INFO Save best model: monitor(max)=0.304650
+2024-04-02 02:01:10,520 P4048189 INFO ************ Epoch=6 end ************
+2024-04-02 02:02:28,144 P4048189 INFO Train loss: 0.581077
+2024-04-02 02:02:28,145 P4048189 INFO Evaluation @epoch 7 - batch 1094: 
+2024-04-02 02:02:39,478 P4048189 INFO ===
+2024-04-02 02:02:39,479 P4048189 INFO [Metrics] AUC: 0.739792 - logloss: 0.433790
+2024-04-02 02:02:39,482 P4048189 INFO Save best model: monitor(max)=0.306002
+2024-04-02 02:02:45,993 P4048189 INFO ************ Epoch=7 end ************
+2024-04-02 02:04:01,275 P4048189 INFO Train loss: 0.579789
+2024-04-02 02:04:01,275 P4048189 INFO Evaluation @epoch 8 - batch 1094: 
+2024-04-02 02:04:13,851 P4048189 INFO ===
+2024-04-02 02:04:13,852 P4048189 INFO [Metrics] AUC: 0.741075 - logloss: 0.434830
+2024-04-02 02:04:13,859 P4048189 INFO Save best model: monitor(max)=0.306244
+2024-04-02 02:04:20,619 P4048189 INFO ************ Epoch=8 end ************
+2024-04-02 02:05:37,704 P4048189 INFO Train loss: 0.578736
+2024-04-02 02:05:37,705 P4048189 INFO Evaluation @epoch 9 - batch 1094: 
+2024-04-02 02:05:50,247 P4048189 INFO ===
+2024-04-02 02:05:50,247 P4048189 INFO [Metrics] AUC: 0.734204 - logloss: 0.442228
+2024-04-02 02:05:50,251 P4048189 INFO Monitor(max)=0.291975 STOP!
+2024-04-02 02:05:50,251 P4048189 INFO Reduce learning rate on plateau: 0.000100
+2024-04-02 02:05:50,397 P4048189 INFO ************ Epoch=9 end ************
+2024-04-02 02:07:10,106 P4048189 INFO Train loss: 0.550190
+2024-04-02 02:07:10,107 P4048189 INFO Evaluation @epoch 10 - batch 1094: 
+2024-04-02 02:07:23,548 P4048189 INFO ===
+2024-04-02 02:07:23,548 P4048189 INFO [Metrics] AUC: 0.747086 - logloss: 0.432869
+2024-04-02 02:07:23,555 P4048189 INFO Save best model: monitor(max)=0.314217
+2024-04-02 02:07:29,609 P4048189 INFO ************ Epoch=10 end ************
+2024-04-02 02:08:49,328 P4048189 INFO Train loss: 0.542832
+2024-04-02 02:08:49,329 P4048189 INFO Evaluation @epoch 11 - batch 1094: 
+2024-04-02 02:09:02,747 P4048189 INFO ===
+2024-04-02 02:09:02,747 P4048189 INFO [Metrics] AUC: 0.749548 - logloss: 0.430647
+2024-04-02 02:09:02,753 P4048189 INFO Save best model: monitor(max)=0.318901
+2024-04-02 02:09:08,847 P4048189 INFO ************ Epoch=11 end ************
+2024-04-02 02:10:27,270 P4048189 INFO Train loss: 0.538744
+2024-04-02 02:10:27,270 P4048189 INFO Evaluation @epoch 12 - batch 1094: 
+2024-04-02 02:10:39,936 P4048189 INFO ===
+2024-04-02 02:10:39,936 P4048189 INFO [Metrics] AUC: 0.744652 - logloss: 0.440480
+2024-04-02 02:10:39,937 P4048189 INFO Monitor(max)=0.304172 STOP!
+2024-04-02 02:10:39,937 P4048189 INFO Reduce learning rate on plateau: 0.000010
+2024-04-02 02:10:40,132 P4048189 INFO ************ Epoch=12 end ************
+2024-04-02 02:11:56,798 P4048189 INFO Train loss: 0.502829
+2024-04-02 02:11:56,798 P4048189 INFO Evaluation @epoch 13 - batch 1094: 
+2024-04-02 02:12:07,658 P4048189 INFO ===
+2024-04-02 02:12:07,659 P4048189 INFO [Metrics] AUC: 0.740571 - logloss: 0.453864
+2024-04-02 02:12:07,662 P4048189 INFO Monitor(max)=0.286707 STOP!
+2024-04-02 02:12:07,662 P4048189 INFO Reduce learning rate on plateau: 0.000001
+2024-04-02 02:12:07,662 P4048189 INFO ********* Epoch==13 early stop *********
+2024-04-02 02:12:07,808 P4048189 INFO Training finished.
+2024-04-02 02:12:07,809 P4048189 INFO Load best model: /mnt/public/lhh/code/model_zoo/SimCEN/SimCEN_torch/checkpoints/kuaivideo_x1/SimCEN_SimCEN_kuaivideo_x1_036_dd62371c.model
+2024-04-02 02:12:08,631 P4048189 INFO ****** Validation evaluation ******
+2024-04-02 02:12:21,580 P4048189 INFO ===
+2024-04-02 02:12:21,581 P4048189 INFO [Metrics] logloss: 0.430647 - AUC: 0.749548
+2024-04-02 02:12:21,761 P4048189 INFO ******** Test evaluation ********
+2024-04-02 02:12:21,761 P4048189 INFO Loading data...
+2024-04-02 02:12:21,761 P4048189 INFO Loading data from h5: ../../../data/KuaiShou/kuaivideo_x1/test.h5
+2024-04-02 02:12:42,736 P4048189 INFO Test samples: total/2730291, blocks/1
+2024-04-02 02:12:42,736 P4048189 INFO Loading test data done.
+2024-04-02 02:12:55,251 P4048189 INFO ===
+2024-04-02 02:12:55,252 P4048189 INFO [Metrics] logloss: 0.430647 - AUC: 0.749548
