@@ -17,7 +17,7 @@ h5py
 tqdm  
 
 ## Experiment results
-![image](https://github.com/salmon1802/SimCEN/assets/73091798/1fdcfcb3-01c9-44d6-ad19-bf204713156c)
+![image](https://github.com/salmon1802/SimCEN/assets/73091798/a65e340c-45e6-41c5-b2f5-fff28404b2d8)
 
 
 
