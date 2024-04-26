@@ -1,3 +1,4 @@
+If you have any questions, feel free to ask!  :)
 # SimCEN: Simple Contrast-enhanced Network for CTR Prediction
 
 ## Model Overview
@@ -22,7 +23,7 @@ tqdm
 
 
 ## Datasets
-Get the datasets from https://github.com/openbenchmark/BARS/tree/main/datasets
+Get the datasets from https://github.com/reczoo/Datasets
 
 ## Hyperparameter settings and logs
 Get the result from ./SimCEN/tree/main/SimCEN_torch/checkpoints
