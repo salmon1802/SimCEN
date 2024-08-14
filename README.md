@@ -32,3 +32,11 @@ Get the result from ./SimCEN/tree/main/SimCEN_torch/checkpoints
 This implementation is based on FuxiCTR and BARS. Thanks for their sharing and contribution.  
 BARS: https://github.com/openbenchmark  
 FuxiCTR: https://github.com/xue-pai/FuxiCTR
+
+```bibtex
+@inproceedings{simcen,
+  title={SimCEN: Simple Contrast-enhanced Network for CTR Prediction},
+  author={Li, Honghao and Sang, Lei and Zhang, Yi and Zhang, Yiwen},
+  booktitle={ACM Multimedia 2024}
+}
+```
