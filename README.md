@@ -34,9 +34,11 @@ BARS: https://github.com/openbenchmark
 FuxiCTR: https://github.com/xue-pai/FuxiCTR
 
 ```bibtex
-@inproceedings{simcen,
-  title={SimCEN: Simple Contrast-enhanced Network for CTR Prediction},
+@inproceedings{li2024simcen,
+  title={{SimCEN: Simple Contrast-enhanced Network for CTR Prediction}},
   author={Li, Honghao and Sang, Lei and Zhang, Yi and Zhang, Yiwen},
-  booktitle={ACM Multimedia 2024}
+  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages={2311--2320},
+  year={2024}
 }
 ```
