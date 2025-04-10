@@ -1,36 +1,51 @@
-### Tiny data for tests only
-tiny_h5:
-    data_root: ../../../data/
-    data_format: h5
-    train_data: ../../../data/tiny_h5/train.h5
-    valid_data: ../../../data/tiny_h5/valid.h5
-    test_data: ../../../data/tiny_h5/test.h5
-
-tiny_csv:
-    data_root: ../../../data/
+kuaivideo_x1:
     data_format: csv
-    train_data: ../../../data/tiny_csv/train_sample.csv
-    valid_data: ../../../data/tiny_csv/valid_sample.csv
-    test_data: ../../../data/tiny_csv/test_sample.csv
-    min_categr_count: 1
+    data_root: ../../../data/KuaiShou/
     feature_cols:
-        [{name: ["userid","adgroup_id","pid","cate_id","campaign_id","customer","brand","cms_segid",
-                 "cms_group_id","final_gender_code","age_level","pvalue_level","shopping_level","occupation"], 
-                 active: True, dtype: str, type: categorical}]
-    label_col: {name: clk, dtype: float}
+    - {active: true, dtype: int, name: group_id, preprocess: copy_from(user_id), remap: false,
+        type: meta}
+    - {active: true, dtype: str, name: user_id, type: categorical}
+    - {active: true, dtype: str, name: item_id, type: categorical}
+    - {active: true, dtype: str, embedding_dim: 64, min_categr_count: 1, name: item_emb,
+        preprocess: copy_from(item_id), pretrained_emb: ../../../data/KuaiVideo_x1/item_visual_emb_dim64.h5,
+        type: categorical}
+    - {active: true, dtype: str, max_len: 100, name: pos_items, padding: pre, share_embedding: item_id,
+        splitter: ^, type: sequence}
+    - {active: true, dtype: str, max_len: 100, name: neg_items, padding: pre, share_embedding: item_id,
+        splitter: ^, type: sequence}
+    - {active: true, dtype: str, embedding_dim: 64, max_len: 100, min_categr_count: 1,
+        name: pos_items_emb, padding: pre, preprocess: copy_from(pos_items), pretrained_emb: ../../../data/KuaiVideo_x1/item_visual_emb_dim64.h5,
+        share_embedding: item_emb, splitter: ^, type: sequence}
+    - {active: true, dtype: str, embedding_dim: 64, max_len: 100, min_categr_count: 1,
+        name: neg_items_emb, padding: pre, preprocess: copy_from(neg_items), pretrained_emb: ../../../data/KuaiVideo_x1/item_visual_emb_dim64.h5,
+        share_embedding: item_emb, splitter: ^, type: sequence}
+    label_col: {dtype: float, name: is_click}
+    min_categr_count: 10
+    test_data: ../../../data/KuaiVideo_x1/test.csv
+    train_data: ../../../data/KuaiVideo_x1/train.csv
+    valid_data: ../../../data/KuaiVideo_x1/test.csv
 
-tiny:
-    data_root: ../../data/
+microvideo1.7m_x1:
     data_format: csv
-    train_data: ../../data/tiny_csv/train_sample.csv
-    valid_data: ../../data/tiny_csv/valid_sample.csv
-    test_data: ../../data/tiny_csv/test_sample.csv
-    min_categr_count: 1
+    data_root: ../../../data/MicroVideo1.7M/
     feature_cols:
-        [{name: ["userid","adgroup_id","pid","cate_id","campaign_id","customer","brand","cms_segid",
-                 "cms_group_id","final_gender_code","age_level","pvalue_level","shopping_level","occupation"],
-                 active: True, dtype: str, type: categorical}]
-    label_col: {name: clk, dtype: float}
+    - {active: true, dtype: int, name: group_id, preprocess: copy_from(user_id), remap: false,
+        type: meta}
+    - {active: true, dtype: str, name: user_id, type: categorical}
+    - {active: true, dtype: str, embedding_dim: 64, name: item_id, pretrained_emb: ../../../data/MicroVideo1.7M_x1/item_image_emb_dim64.h5,
+        type: categorical}
+    - {active: true, dtype: str, name: cate_id, type: categorical}
+    - {active: true, dtype: str, embedding_dim: 64, max_len: 100, name: clicked_items,
+        padding: pre, pretrained_emb: ../../../data/MicroVideo1.7M_x1/item_image_emb_dim64.h5,
+        splitter: ^, type: sequence}
+    - {active: true, dtype: str, max_len: 100, name: clicked_categories, padding: pre,
+        share_embedding: cate_id, splitter: ^, type: sequence}
+    - {active: false, dtype: str, name: timestamp, type: categorical}
+    label_col: {dtype: float, name: is_click}
+    min_categr_count: 1
+    test_data: ../../../data/MicroVideo1.7M_x1/test.csv
+    train_data: ../../../data/MicroVideo1.7M_x1/train.csv
+    valid_data: ../../../data/MicroVideo1.7M_x1/test.csv
 
 
 Avazu_x4_h5:
